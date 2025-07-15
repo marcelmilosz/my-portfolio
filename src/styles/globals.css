@@ -1,0 +1,17 @@
+@import "tailwindcss";
+
+/* Default is black theme  */
+:root {
+    --background: #222;
+}
+
+@theme {
+    /* Fonts */
+    --font-sans: "Inter", sans-serif;
+    --font-display: "Poppins", sans-serif;
+}
+
+body {
+    background: var(--background);
+    font-family: var(--font-sans);
+}
