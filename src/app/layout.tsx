@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../styles/globals.css";
+import { ThemeInit } from "@/components/layout/ThemeInit";
+import Navbar from "@/components/layout/Navbar/Navbar";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -19,9 +21,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <ThemeInit />
       <body
-        className={`${inter.variable} antialiased`}
+        className={`${inter.variable} antialiased w-full py-8 min-h-screen overflow-x-hidden`}
+      // style={{ background: "var(--gradient-dark)" }}
       >
+        <Navbar />
         {children}
       </body>
     </html>

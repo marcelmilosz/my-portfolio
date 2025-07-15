@@ -1,13 +1,9 @@
-import { Button } from "@/components/ui/Button";
-
-
+"use client"
 
 export default function Home() {
+
   return (
-    <>
-      <Button> Toggle </Button>
-    </>
-
-
-  );
+    <main className="w-screen h-[var(--landing-height)]">
+    </main>
+  )
 }
