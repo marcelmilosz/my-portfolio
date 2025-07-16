@@ -5,12 +5,15 @@ import moonIcon from "../../public/assets/icons/moon.svg"
 import menuIcon from "../../public/assets/icons/menu.svg"
 import xIcon from "../../public/assets/icons/x.svg"
 
+import pNextjsIcon from "../../public/assets/icons/p_nextjs.svg"
+
 
 export type IconNames =
   | "sun"
   | "moon"
   | "menu"
   | "x"
+  | "p_nextjs"
 
 export type IconsSizeProps = "xxs" | "xs" | "sm" | "md" | "lg" | "xl"
 
@@ -21,12 +24,12 @@ export type IconVariantProps =
 
 const iconVariants = {
   black: {
-    base: `text-black `,
-    fill: `fill-black`,
+    base: `text-[var(--color-static-black)] `,
+    fill: `fill-[var(--color-static-black)]`,
   },
   white: {
-    base: `text-white `,
-    fill: `fill-white`,
+    base: `text-[var(--color-static-white)] `,
+    fill: `fill-[var(--color-static-white)]`,
   },
 
   auto: {
@@ -49,7 +52,8 @@ const ICONS_MAP: Record<IconNames, React.FC<SVGProps<SVGSVGElement>>> = {
   sun: sunIcon,
   moon: moonIcon,
   menu: menuIcon,
-  x: xIcon
+  x: xIcon,
+  p_nextjs: pNextjsIcon
 }
 
 type MyIconProps = {

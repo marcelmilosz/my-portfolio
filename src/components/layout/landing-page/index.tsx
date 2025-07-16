@@ -5,6 +5,8 @@ import Navbar from "../Navbar/Navbar";
 import { Text } from "@/components/ui/Text";
 import meImage from "../../../../public/assets/images/me.jpg"
 import Image from "next/image";
+import MyIcon from "@/app/icons";
+import LanguageBall from "@/components/common/LanguageBall";
 
 // type Props = {};
 
@@ -55,10 +57,14 @@ function LandingPage() {
           </div> */}
         </div>
 
+        <div className="w-full flex items-center justify-center pt-12">
+          <LanguageBall iconName="p_nextjs" />
+        </div>
+
       </LayoutWrapper >
 
 
-      <Gradient gradientName="hero2" position="bottom-0 left-12" width="w-[500px]" />
+      <Gradient gradientName="hero2" position="bottom-[-200px] left-12" width="w-[500px]" />
     </main >
   );
 }
