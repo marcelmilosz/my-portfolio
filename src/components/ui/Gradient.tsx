@@ -28,7 +28,7 @@ export function Gradient({
   return (
     <div
       className={`
-        absolute z-1 ${position} ${width} ${height}
+        absolute -z-1 ${position} ${width} ${height}
         ${opacity} ${blur} ${rounded} ${className}
       `}
       style={{ background: gradientBg }}

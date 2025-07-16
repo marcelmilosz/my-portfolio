@@ -17,8 +17,8 @@ export type PADDINGS_PROPS = "none" | "sm" | "md" | "lg";
 export const PADDINGS: Record<EQUAL_PADDINGS_PROPS, string> = {
     none: "px-0 py-0",
     sm: "px-2 py-1",
-    md: "px-3 py-2",
-    lg: "px-4 py-3",
+    md: "px-4 py-2",
+    lg: "px-5 py-3",
 };
 
 export type EQUAL_PADDINGS_PROPS = "none" | "sm" | "md" | "lg";

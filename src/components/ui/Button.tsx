@@ -1,5 +1,6 @@
 import React from "react"
 import { BORDER_RADIUSES, BORDER_RADIUSES_PROPS, DEFAULT_BORDER_RADIUS, PADDINGS, PADDINGS_PROPS } from "../_shared"
+import { Text } from "./Text"
 
 
 
@@ -52,7 +53,7 @@ export function Button({
 
   const size = shape === "circle" ? "w-10 h-10" : "max-w-max "
 
-  const btnBase = `${size} transition-all duration-200 font-inherit cursor-pointer inline-flex items-center justify-center ${BORDER_RADIUSES[rounded]} ${PADDINGS[p]}`
+  const btnBase = `${size} whitespace-nowrap select-none transition-all duration-200 font-inherit cursor-pointer inline-flex items-center justify-center ${BORDER_RADIUSES[rounded]} ${PADDINGS[p]}`
 
   const variantBase = ButtonVariants[variant].base
   const variantHover = ButtonVariants[variant].hover
@@ -70,7 +71,7 @@ export function Button({
       disabled={disabled}
       className={`${btnBase} ${variantBase} ${variantHover} ${variantShadow} ${disabledStyles} ${variantBorder} ${className}`}
     >
-      {children}
+      <Text size="base" weight="light">{children}</Text>
     </button>
   )
 }

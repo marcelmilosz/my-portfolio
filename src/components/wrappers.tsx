@@ -8,7 +8,7 @@ type LayoutWrapperProps = {
 
 export function LayoutWrapper({ children, className = "", style }: LayoutWrapperProps) {
   return (
-    <div className={`w-full px-4 max-sm:px-2`}>
+    <div className={`w-full px-8 max-sm:px-4`}>
       <div className={`mx-auto max-w-[1280px] ${className}`} style={style}>
         {children}
       </div>
@@ -40,7 +40,7 @@ export function GlassBox({ children, className = "", rounded = DEFAULT_BORDER_RA
 
   return (
     <div
-      className={`${glassBase} ${glassBorder} ${glassShadow} ${glassBlur} ${BORDER_RADIUSES[rounded]} ${PADDINGS[p]} ${className}`}
+      className={`${glassBase} ${glassBorder} ${glassShadow} ${glassBlur} ${BORDER_RADIUSES[rounded]} ${p === "none" ? "" : PADDINGS[p]} ${className}`}
     >
       {children}
     </div>

@@ -1,11 +1,13 @@
 @import "tailwindcss";
 
-/* Default */
+/* Default (dark) */
 :root {
     --navbar-height: 120px;
+    --navbar-height-mobile: 80px;
     --landing-height: calc(100vh - 120px);
 
     --gradient-hero: radial-gradient(circle at 40% 30%, rgba(63, 8, 151, 0.9), transparent 60%);
+    --gradient-hero2: radial-gradient(circle at 40% 30%, rgba(34, 8, 151, 0.9), transparent 60%);
     /* --gradient-footer: linear-gradient(45deg, rgba(0, 0, 0, 0.4), rgba(50, 50, 50, 0.2)); */
     /* --gradient-blob1: radial-gradient(circle at 40% 30%, rgba(89, 0, 255, 0.9), transparent 60%); */
 
@@ -13,11 +15,11 @@
 
     --color-black: #000;
     --color-white: #fff;
-}
+    --color-text-muted: #aaa;
 
-@theme {
     --color-primary: #7c3aed;
 
+    /* Glass box  */
     --color-glass-box: rgba(255, 255, 255, 0.03);
     --color-glass-box-hover: rgba(255, 255, 255, 0.05);
 
@@ -25,20 +27,28 @@
     --color-glass-shadow: 0 4px 16px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.5),
         inset 1px 0 0 rgba(255, 255, 255, 0.3), inset 0 -1px 0 rgba(255, 255, 255, 0.2),
         inset -1px 0 0 rgba(255, 255, 255, 0.1), inset 0 0 8px 2px rgba(255, 255, 255, 0.1);
+
+    /* Navbar mobile box  */
+
+    --color-navbar-mobile-glass-box: rgba(255, 255, 255, 0.05);
 }
 
+/* @theme {
+} */
+
+/* default is Dark  */
 [data-theme="light"] {
     --background: #f9fafb;
-    --text-color: #111827;
-    --text-muted: #6b7280;
     --color-white: #000;
     --color-black: #fff;
+
+    --color-glass-box-hover: rgba(0, 0, 0, 0.02);
 }
 
 [data-theme="dark"] {
     --background: #000;
-    --text-color: #eaeaea;
-    --text-muted: #999;
+
+    --color-glass-box-hover: rgba(255, 255, 255, 0.05);
 }
 
 body {
@@ -51,5 +61,44 @@ body {
 
 * {
     font-family: var(--font-inter);
-    z-index: 10;
+    /* animation-duration: 200ms; */
+    /* transition: all 100ms; */
+}
+
+/* ===== ANIMATIONS BELOW ===== */
+
+@keyframes gradient-slide {
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Hero gradient animation  */
+.custom-gradient-text {
+    background-image: linear-gradient(90deg, #7c3aed, #db2777, #3b82f6);
+    background-size: 200% 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: gradient-slide 6s ease infinite;
+}
+
+/* Slide up animation  */
+@keyframes slideUp {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+.animate-slide-up {
+    animation: slideUp 0.4s ease-out forwards;
 }

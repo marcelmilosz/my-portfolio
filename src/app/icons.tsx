@@ -2,11 +2,15 @@ import React, { SVGProps } from "react"
 // icons
 import sunIcon from "../../public/assets/icons/sun.svg"
 import moonIcon from "../../public/assets/icons/moon.svg"
+import menuIcon from "../../public/assets/icons/menu.svg"
+import xIcon from "../../public/assets/icons/x.svg"
 
 
 export type IconNames =
   | "sun"
   | "moon"
+  | "menu"
+  | "x"
 
 export type IconsSizeProps = "xxs" | "xs" | "sm" | "md" | "lg" | "xl"
 
@@ -44,6 +48,8 @@ const IconsSize = {
 const ICONS_MAP: Record<IconNames, React.FC<SVGProps<SVGSVGElement>>> = {
   sun: sunIcon,
   moon: moonIcon,
+  menu: menuIcon,
+  x: xIcon
 }
 
 type MyIconProps = {
