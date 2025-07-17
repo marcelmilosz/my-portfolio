@@ -22,7 +22,7 @@ export default function RootLayout({
     <html lang="en">
       <ThemeInit />
       <body
-        className={`${inter.variable} antialiased w-full py-8 min-h-screen`}
+        className={`${inter.variable} antialiased w-full py-8 min-h-screen overflow-x-hidden`}
       >
         {children}
       </body>

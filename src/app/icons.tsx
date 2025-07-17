@@ -4,6 +4,7 @@ import sunIcon from "../../public/assets/icons/sun.svg"
 import moonIcon from "../../public/assets/icons/moon.svg"
 import menuIcon from "../../public/assets/icons/menu.svg"
 import xIcon from "../../public/assets/icons/x.svg"
+import arrowDownIcon from "../../public/assets/icons/arrow-down.svg"
 
 import pNextjsIcon from "../../public/assets/icons/p_nextjs.svg"
 
@@ -14,6 +15,7 @@ export type IconNames =
   | "menu"
   | "x"
   | "p_nextjs"
+  | "arrow_down"
 
 export type IconsSizeProps = "xxs" | "xs" | "sm" | "md" | "lg" | "xl"
 
@@ -53,7 +55,8 @@ const ICONS_MAP: Record<IconNames, React.FC<SVGProps<SVGSVGElement>>> = {
   moon: moonIcon,
   menu: menuIcon,
   x: xIcon,
-  p_nextjs: pNextjsIcon
+  p_nextjs: pNextjsIcon,
+  arrow_down: arrowDownIcon
 }
 
 type MyIconProps = {

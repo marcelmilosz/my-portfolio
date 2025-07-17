@@ -6,13 +6,12 @@ import { Text } from "@/components/ui/Text";
 import meImage from "../../../../public/assets/images/me.jpg"
 import Image from "next/image";
 import MyIcon from "@/app/icons";
-import LanguageBall from "@/components/common/LanguageBall";
 
 // type Props = {};
 
 function LandingPage() {
   return (
-    <main className="w-screen h-screen relative overflow-hidden">
+    <main className="w-full h-screen relative">
       <Gradient gradientName="hero" position="left-1/3 top-[-100px]" width="w-[1500px]" />
       <Navbar />
 
@@ -57,8 +56,14 @@ function LandingPage() {
           </div> */}
         </div>
 
-        <div className="w-full flex items-center justify-center pt-12">
+        {/* <div className="w-full flex items-center justify-center pt-12">
           <LanguageBall iconName="p_nextjs" />
+          <Gradient gradientName="hero2" position="bottom-[50px] left-[300px]" width="w-[500px]" />
+        </div> */}
+
+        <div className="w-full h-max absolute left-0 bottom-0 py-2 flex flex-col gap-2 items-center justify-center">
+          <Text size="xs" weight="light"> Let me introduce myself </Text>
+          <MyIcon iconName="arrow_down" />
         </div>
 
       </LayoutWrapper >
