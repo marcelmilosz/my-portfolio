@@ -5,6 +5,7 @@ type LayoutWrapperProps = {
   className?: string;
   style?: React.CSSProperties;
   size?: "desktop" | "laptop" // desktop = 1280px laptop = 1080px
+  id?: string
 };
 
 export const LayoutSizes = {
@@ -14,12 +15,12 @@ export const LayoutSizes = {
 
 export type LayoutSize = keyof typeof LayoutSizes;
 
-export function LayoutWrapper({ children, className = "", style, size = "desktop" }: LayoutWrapperProps) {
+export function LayoutWrapper({ children, className = "", style, size = "desktop", id = "" }: LayoutWrapperProps) {
 
   const LayoutSize = LayoutSizes[size]
 
   return (
-    <div className={`w-full px-8 max-sm:px-4`}>
+    <div className={`w-full px-8 max-sm:px-4 scroll-mt-[50px]`} id={id}>
       <div className={`mx-auto ${LayoutSize} ${className}`} style={style}>
         {children}
       </div>

@@ -14,6 +14,7 @@ type ButtonProps = {
   rounded?: BORDER_RADIUSES_PROPS
   p?: PADDINGS_PROPS,
   shape?: "default" | "circle"
+  shapeSize?: string
 }
 
 type ButtonVariant = "primary" | "glass"
@@ -48,10 +49,11 @@ export function Button({
   type = "button",
   rounded = DEFAULT_BORDER_RADIUS,
   p = "md",
-  shape = "default"
+  shape = "default",
+  shapeSize = "w-10 h-10"
 }: ButtonProps) {
 
-  const size = shape === "circle" ? "w-10 h-10" : "max-w-max "
+  const size = shape === "circle" ? shapeSize : "max-w-max "
 
   const btnBase = `${size} whitespace-nowrap select-none transition-all duration-200 font-inherit cursor-pointer inline-flex items-center justify-center ${BORDER_RADIUSES[rounded]} ${PADDINGS[p]}`
 

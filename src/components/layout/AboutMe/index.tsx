@@ -18,7 +18,7 @@ const HIGHLIGHTS = [
 
 function AboutMe() {
   return (
-    <LayoutWrapper className="w-full min-h-screen" size="laptop">
+    <LayoutWrapper className="w-full min-h-screen" size="laptop" id="about-me">
 
       <div className="w-full h-full">
         <SectionTitle title="About me" subtitle="In a nutshell" />

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "../styles/globals.css";
 import { ThemeInit } from "@/components/layout/ThemeInit";
+import { ScrollToTopButton } from "@/components/common/ScrollTop";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -25,6 +26,7 @@ export default function RootLayout({
         className={`${inter.variable} antialiased w-full  min-h-screen overflow-x-hidden`}
       >
         {children}
+        <ScrollToTopButton />
       </body>
     </html>
   );

@@ -64,6 +64,10 @@
     --color-glass-box-hover: rgba(255, 255, 255, 0.05);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: var(--background);
     color: var(--text-color);

@@ -10,7 +10,8 @@ type Props = {
 
 function SectionTitle({ title, subtitle }: Props) {
   return (
-    <div className="flex gap-4 items-center">
+    <div className="flex gap-4 items-center pt-4">
+      {/* pt-4 is needed for scroll to better behaviour */}
 
       <GlassBox rounded="full" className="w-[56px] h-[56px] flex items-center justify-center" p="none">
         <MyIcon iconName="hash" iconVariant="auto" iconSize="xl" iconStroke="2" />

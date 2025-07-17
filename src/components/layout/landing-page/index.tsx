@@ -6,6 +6,8 @@ import { Text } from "@/components/ui/Text";
 import meImage from "../../../../public/assets/images/me.jpg"
 import Image from "next/image";
 import MyIcon from "@/app/icons";
+import Link from "next/link";
+import { ScrollTo } from "@/components/common/ScrollTo";
 
 // type Props = {};
 
@@ -44,13 +46,20 @@ function LandingPage() {
             <Text weight="light" size="base">Web, Data Science & Low-Level Programming Enthusiast</Text>
           </div>
 
+          <div className="flex pt-12 gap-4">
+            <Link href="https://github.com/marcelmilosz" target="_blank"><MyIcon iconName="social_github" /></Link>
+            <Link href="https://www.linkedin.com/in/marcelmilosz/" target="_blank"><MyIcon iconName="social_linkedin" /></Link>
+          </div>
+
         </div>
 
 
-        <div className="w-full h-max absolute left-0 bottom-0 py-2 flex flex-col gap-2 items-center justify-center">
-          <Text size="xs" weight="normal"> Let me introduce myself </Text>
-          <MyIcon iconName="arrow_down" />
-        </div>
+        <ScrollTo id="about-me">
+          <div className="w-full h-max absolute left-0 bottom-0 py-2 flex flex-col gap-2 items-center justify-center cursor-pointer">
+            <Text size="xs" weight="normal">A bit about me</Text>
+            <div className="animate-bounce"><MyIcon iconName="arrow_down" /></div>
+          </div>
+        </ScrollTo>
 
       </LayoutWrapper >
     </main >
