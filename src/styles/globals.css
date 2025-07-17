@@ -8,6 +8,7 @@
 
     --gradient-hero: radial-gradient(circle at 40% 30%, rgba(63, 8, 151, 0.9), transparent 60%);
     --gradient-hero2: radial-gradient(circle at 10% 30%, rgba(34, 8, 151, 0.9), transparent 60%);
+    --gradient-hero3: radial-gradient(circle at 10% 30%, rgba(172, 20, 103, 0.8), transparent 60%);
 
     --color-black: #000;
     --color-white: #fff;
@@ -18,7 +19,7 @@
 
     --color-text-muted: #aaa;
 
-    --color-primary: #7c3aed;
+    --color-primary: #8f50fc;
     --color-secondary: #db2777;
 
     /* Glass box  */

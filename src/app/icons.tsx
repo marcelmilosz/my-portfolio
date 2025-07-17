@@ -4,9 +4,14 @@ import sunIcon from "../../public/assets/icons/sun.svg"
 import moonIcon from "../../public/assets/icons/moon.svg"
 import menuIcon from "../../public/assets/icons/menu.svg"
 import xIcon from "../../public/assets/icons/x.svg"
+import hashIcon from "../../public/assets/icons/hash.svg"
+import codeIcon from "../../public/assets/icons/code.svg"
 import arrowDownIcon from "../../public/assets/icons/arrow-down.svg"
 
 import pNextjsIcon from "../../public/assets/icons/p_nextjs.svg"
+
+import socialLinkedInIcon from "../../public/assets/icons/social_linkedin.svg"
+import socialGithubIcon from "../../public/assets/icons/social_github.svg"
 
 
 export type IconNames =
@@ -16,6 +21,10 @@ export type IconNames =
   | "x"
   | "p_nextjs"
   | "arrow_down"
+  | "hash"
+  | "code"
+  | "social_linkedin"
+  | "social_github"
 
 export type IconsSizeProps = "xxs" | "xs" | "sm" | "md" | "lg" | "xl"
 
@@ -56,7 +65,11 @@ const ICONS_MAP: Record<IconNames, React.FC<SVGProps<SVGSVGElement>>> = {
   menu: menuIcon,
   x: xIcon,
   p_nextjs: pNextjsIcon,
-  arrow_down: arrowDownIcon
+  arrow_down: arrowDownIcon,
+  hash: hashIcon,
+  code: codeIcon,
+  social_github: socialGithubIcon,
+  social_linkedin: socialLinkedInIcon
 }
 
 type MyIconProps = {

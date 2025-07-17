@@ -4,12 +4,23 @@ type LayoutWrapperProps = {
   children: React.ReactNode;
   className?: string;
   style?: React.CSSProperties;
+  size?: "desktop" | "laptop" // desktop = 1280px laptop = 1080px
 };
 
-export function LayoutWrapper({ children, className = "", style }: LayoutWrapperProps) {
+export const LayoutSizes = {
+  desktop: "max-w-[1280px]",
+  laptop: "max-w-[1080px]",
+} as const;
+
+export type LayoutSize = keyof typeof LayoutSizes;
+
+export function LayoutWrapper({ children, className = "", style, size = "desktop" }: LayoutWrapperProps) {
+
+  const LayoutSize = LayoutSizes[size]
+
   return (
     <div className={`w-full px-8 max-sm:px-4`}>
-      <div className={`mx-auto max-w-[1280px] ${className}`} style={style}>
+      <div className={`mx-auto ${LayoutSize} ${className}`} style={style}>
         {children}
       </div>
     </div>

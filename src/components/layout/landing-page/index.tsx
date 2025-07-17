@@ -1,4 +1,4 @@
-import { Gradient } from "@/components/ui/Gradient";
+
 import { GlassBox, LayoutWrapper } from "@/components/wrappers";
 import React from "react";
 import Navbar from "../Navbar/Navbar";
@@ -12,7 +12,6 @@ import MyIcon from "@/app/icons";
 function LandingPage() {
   return (
     <main className="w-full h-screen relative">
-      <Gradient gradientName="hero" position="left-1/3 top-[-100px]" width="w-[1500px]" />
       <Navbar />
 
       <LayoutWrapper className={`h-(--landing-height)`}>
@@ -45,31 +44,15 @@ function LandingPage() {
             <Text weight="light" size="base">Web, Data Science & Low-Level Programming Enthusiast</Text>
           </div>
 
-          {/* <div className="flex w-full px-24 items-center justify-center">
-
-            <div className="max-w-[400px]">
-              <Text weight="light" size="sm" variant="muted">
-                I build full-stack applications with a strong focus on clean architecture and performance. I&apos;m also passionate about Data Science, algorithms, and low-level programming.
-                Constant learning and curiosity drive my work — backed by a growing GitHub portfolio and years of real-world experience.
-              </Text>
-            </div>
-          </div> */}
         </div>
 
-        {/* <div className="w-full flex items-center justify-center pt-12">
-          <LanguageBall iconName="p_nextjs" />
-          <Gradient gradientName="hero2" position="bottom-[50px] left-[300px]" width="w-[500px]" />
-        </div> */}
 
         <div className="w-full h-max absolute left-0 bottom-0 py-2 flex flex-col gap-2 items-center justify-center">
-          <Text size="xs" weight="light"> Let me introduce myself </Text>
+          <Text size="xs" weight="normal"> Let me introduce myself </Text>
           <MyIcon iconName="arrow_down" />
         </div>
 
       </LayoutWrapper >
-
-
-      <Gradient gradientName="hero2" position="bottom-[-200px] left-12" width="w-[500px]" />
     </main >
   );
 }
