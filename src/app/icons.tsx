@@ -8,6 +8,7 @@ import hashIcon from "../../public/assets/icons/hash.svg"
 import codeIcon from "../../public/assets/icons/code.svg"
 import arrowDownIcon from "../../public/assets/icons/arrow-down.svg"
 
+// Front 
 import pNextjsIcon from "../../public/assets/icons/p_nextjs.svg"
 import pBootstrapIcon from "../../public/assets/icons/p_bootstrap.svg"
 import pBulmaIcon from "../../public/assets/icons/p_bulma.svg"
@@ -19,6 +20,29 @@ import pReactIcon from "../../public/assets/icons/p_react.svg"
 import pScssIcon from "../../public/assets/icons/p_scss.svg"
 import pTailwindIcon from "../../public/assets/icons/p_tailwind.svg"
 import pJestIcon from "../../public/assets/icons/p_jest.svg"
+import pTs from "../../public/assets/icons/p_ts.svg"
+
+// Backend 
+import pDjangoRest from "../../public/assets/icons/p_django_rest.svg"
+import pDjango from "../../public/assets/icons/p_django.svg"
+import pFlask from "../../public/assets/icons/p_flask.svg"
+import pGoogleCloud from "../../public/assets/icons/p_googlecloud.svg"
+import pHeroku from "../../public/assets/icons/p_heroku.svg"
+import pNodejs from "../../public/assets/icons/p_nodejs.svg"
+import pPostman from "../../public/assets/icons/p_postman.svg"
+import pSql from "../../public/assets/icons/p_sql.svg"
+import pPostgres from "../../public/assets/icons/p_postgresql.svg"
+import pMongo from "../../public/assets/icons/p_mongo.svg"
+import pAws from "../../public/assets/icons/p_aws.svg"
+
+// DS
+import dsJupyter from "../../public/assets/icons/ds_jupyter.svg"
+import dsNumpy from "../../public/assets/icons/ds_numpy.svg"
+import dsPandas from "../../public/assets/icons/ds_pandas.svg"
+import dsPython from "../../public/assets/icons/ds_python.svg"
+import dsR from "../../public/assets/icons/ds_R.svg"
+import dsScikit from "../../public/assets/icons/ds_scikit.svg"
+import dsSelenium from "../../public/assets/icons/ds_selenium.svg"
 
 import socialLinkedInIcon from "../../public/assets/icons/social_linkedin.svg"
 import socialGithubIcon from "../../public/assets/icons/social_github.svg"
@@ -29,6 +53,13 @@ export type IconNames =
   | "moon"
   | "menu"
   | "x"
+  | "arrow_down"
+  | "hash"
+  | "code"
+  | "social_linkedin"
+  | "social_github"
+
+  // Frontend 
   | "p_nextjs"
   | "p_bootstrap"
   | "p_bulma"
@@ -40,13 +71,31 @@ export type IconNames =
   | "p_scss"
   | "p_tailwind"
   | "p_jest"
+  | "p_ts"
+
+  // Backend
+  | "p_django"
+  | "p_django_rest"
+  | "p_flask"
+  | "p_google_cloud"
+  | "p_heroku"
+  | "p_nodejs"
+  | "p_postman"
+  | "p_sql"
+  | "p_postgres"
+  | "p_mongo"
+  | "p_aws"
+
+  // DS
+  | "ds_jupyter"
+  | "ds_numpy"
+  | "ds_pandas"
+  | "ds_python"
+  | "ds_R"
+  | "ds_scikit"
+  | "ds_selenium"
 
 
-  | "arrow_down"
-  | "hash"
-  | "code"
-  | "social_linkedin"
-  | "social_github"
 
 
 export type IconsSizeProps = "xxs" | "xs" | "sm" | "md" | "lg" | "xl" | "skillset"
@@ -87,7 +136,14 @@ const ICONS_MAP: Record<IconNames, React.FC<SVGProps<SVGSVGElement>>> = {
   sun: sunIcon,
   moon: moonIcon,
   menu: menuIcon,
+  arrow_down: arrowDownIcon,
   x: xIcon,
+  hash: hashIcon,
+  code: codeIcon,
+  social_github: socialGithubIcon,
+  social_linkedin: socialLinkedInIcon,
+
+  // Front 
   p_nextjs: pNextjsIcon,
   p_bootstrap: pBootstrapIcon,
   p_bulma: pBulmaIcon,
@@ -99,11 +155,32 @@ const ICONS_MAP: Record<IconNames, React.FC<SVGProps<SVGSVGElement>>> = {
   p_scss: pScssIcon,
   p_tailwind: pTailwindIcon,
   p_jest: pJestIcon,
-  arrow_down: arrowDownIcon,
-  hash: hashIcon,
-  code: codeIcon,
-  social_github: socialGithubIcon,
-  social_linkedin: socialLinkedInIcon
+  p_ts: pTs,
+
+  // Backend 
+  p_django: pDjango,
+  p_django_rest: pDjangoRest,
+  p_flask: pFlask,
+  p_google_cloud: pGoogleCloud,
+  p_heroku: pHeroku,
+  p_nodejs: pNodejs,
+  p_postman: pPostman,
+  p_sql: pSql,
+  p_mongo: pMongo,
+  p_postgres: pPostgres,
+  p_aws: pAws,
+
+  // DS
+  ds_jupyter: dsJupyter,
+  ds_numpy: dsNumpy,
+  ds_pandas: dsPandas,
+  ds_python: dsPython,
+  ds_R: dsR,
+  ds_scikit: dsScikit,
+  ds_selenium: dsSelenium,
+
+
+
 }
 
 type MyIconProps = {
