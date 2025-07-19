@@ -43,6 +43,20 @@ import dsPython from "../../public/assets/icons/ds_python.svg"
 import dsR from "../../public/assets/icons/ds_R.svg"
 import dsScikit from "../../public/assets/icons/ds_scikit.svg"
 import dsSelenium from "../../public/assets/icons/ds_selenium.svg"
+import dsExcel from "../../public/assets/icons/ds_excel.svg"
+
+// Design
+import sAi from "../../public/assets/icons/s_ai.svg"
+import sPs from "../../public/assets/icons/s_ps.svg"
+import sFigma from "../../public/assets/icons/s_figma.svg"
+import sCanva from "../../public/assets/icons/s_canva.svg"
+import sXd from "../../public/assets/icons/s_xd.svg"
+
+// Low level
+import lArduino from "../../public/assets/icons/l_arduino.svg"
+import lC from "../../public/assets/icons/l_c.svg"
+import lCpp from "../../public/assets/icons/l_cpp.svg"
+import lAsm from "../../public/assets/icons/l_asm.svg"
 
 import socialLinkedInIcon from "../../public/assets/icons/social_linkedin.svg"
 import socialGithubIcon from "../../public/assets/icons/social_github.svg"
@@ -94,6 +108,21 @@ export type IconNames =
   | "ds_R"
   | "ds_scikit"
   | "ds_selenium"
+  | "ds_excel"
+
+  // Design
+  | "s_ai"
+  | "s_ps"
+  | "s_figma"
+  | "s_canva"
+  | "s_xd"
+
+
+  // Low level
+  | "l_arduino"
+  | "l_asm"
+  | "l_c"
+  | "l_cpp"
 
 
 
@@ -178,6 +207,21 @@ const ICONS_MAP: Record<IconNames, React.FC<SVGProps<SVGSVGElement>>> = {
   ds_R: dsR,
   ds_scikit: dsScikit,
   ds_selenium: dsSelenium,
+  ds_excel: dsExcel,
+
+
+  // design
+  s_ai: sAi,
+  s_ps: sPs,
+  s_figma: sFigma,
+  s_canva: sCanva,
+  s_xd: sXd,
+
+  // Low level
+  l_arduino: lArduino,
+  l_asm: lAsm,
+  l_c: lC,
+  l_cpp: lCpp,
 
 
 

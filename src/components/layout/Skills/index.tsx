@@ -15,7 +15,7 @@ function Skills() {
         <SectionTitle title="My Skillset" subtitle="Languages, Tools & Technologies" iconName="code" />
       </div>
 
-      <div className="py-12 flex flex-col gap-12">
+      <div className="py-12 flex flex-col gap-24">
         <div className="flex flex-col gap-4">
           <Text size="2xl" weight="semibold" variant="auto"> Web / Front-end </Text>
 
@@ -31,6 +31,19 @@ function Skills() {
             <SkillBox iconName="p_bootstrap" skillName="Bootstrap" />
             <SkillBox iconName="p_bulma" skillName="Bulma" />
             <SkillBox iconName="p_jest" skillName="Jest" />
+          </div>
+        </div>
+
+
+        <div className="flex flex-col gap-4">
+          <Text size="2xl" weight="semibold" variant="auto"> UI/UX & Graphics </Text>
+
+          <div className="flex flex-wrap gap-4">
+            <SkillBox iconName="s_figma" skillName="Figma" tag="Intermediate" />
+            <SkillBox iconName="s_canva" skillName="Canva" tag="Intermediate" />
+            <SkillBox iconName="s_ps" skillName="Adobe Photoshop" tag="Intermediate" />
+            <SkillBox iconName="s_ai" skillName="Adobe Illustrator" tag="Intermediate" />
+            <SkillBox iconName="s_xd" skillName="Adobe Xd" tag="Familiar" />
           </div>
         </div>
 
@@ -61,11 +74,28 @@ function Skills() {
             <SkillBox iconName="ds_numpy" skillName="Numpy" tag="Intermediate" />
             <SkillBox iconName="ds_pandas" skillName="Pandas" tag="Intermediate" />
             <SkillBox iconName="ds_R" skillName="R" tag="Intermediate" />
+            <SkillBox iconName="ds_excel" skillName="Excel" tag="Intermediate" />
             <SkillBox iconName="ds_scikit" skillName="Scikit learn" />
             <SkillBox iconName="ds_selenium" skillName="Selenium" />
             <SkillBox iconName="ds_jupyter" skillName="Jupyter" />
           </div>
         </div>
+
+        <div className="flex flex-col gap-4">
+          <Text size="2xl" weight="semibold" variant="auto"> Bare Metal & Beyond </Text>
+
+          <div className="flex flex-wrap gap-4">
+            <SkillBox iconName="l_cpp" skillName="C++" tag="Intermediate" />
+            <SkillBox iconName="l_c" skillName="C" tag="Learning" />
+            <SkillBox iconName="l_asm" skillName="Assembly Language (Nasm)" tag="Learning" />
+            <SkillBox iconName="l_arduino" skillName="Arduino" />
+          </div>
+        </div>
+
+
+        <span className="text-sm text-[var(--color-text-muted)] font-light italic">
+          Each skill listed here is either one I excel at, have used in commercial projects, or explored through personal projects—always with at least a solid grasp of the fundamentals.
+        </span>
       </div>
 
     </LayoutWrapper>
