@@ -8,11 +8,12 @@ type TextProps = {
   className?: string;
 };
 
-type TextSize = "xs" | "sm" | "base" | "lg" | "xl" | "2xl" | "3xl" | "hero";
+type TextSize = "xxs" | "xs" | "sm" | "base" | "lg" | "xl" | "2xl" | "3xl" | "hero";
 type TextWeight = "light" | "normal" | "medium" | "semibold" | "bold";
-type TextVariant = "primary" | "muted";
+type TextVariant = "auto" | "muted" | "primary" | "secondary" | "white";
 
 const sizeMap: Record<TextSize, string> = {
+  xxs: "text-[8px]",
   xs: "text-xs",
   sm: "text-sm",
   base: "text-base max-md:text-sm",
@@ -32,15 +33,18 @@ const weightMap: Record<TextWeight, string> = {
 };
 
 const variantMap: Record<TextVariant, string> = {
-  primary: "text-[var(--color-white)]",
+  auto: "text-[var(--color-white)]",
+  white: "text-[var(--color-static-white)]",
   muted: "text-[var(--color-text-muted)]",
+  primary: "text-[var(--color-primary)]",
+  secondary: "text-[var(--color-secondary)]",
 };
 
 export function Text({
   children,
   size = "base",
   weight = "normal",
-  variant = "primary",
+  variant = "auto",
   className = "",
 }: TextProps) {
   const styles = `

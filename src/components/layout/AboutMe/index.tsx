@@ -18,7 +18,7 @@ const HIGHLIGHTS = [
 
 function AboutMe() {
   return (
-    <LayoutWrapper className="w-full min-h-screen" size="laptop" id="about-me">
+    <LayoutWrapper className="w-full min-h-max" size="laptop" id="about-me">
 
       <div className="w-full h-full">
         <SectionTitle title="About me" subtitle="In a nutshell" />
@@ -57,7 +57,7 @@ function StatsBox({
   value
 }: { label: string, value: string }) {
   return (
-    <GlassBox className="flex flex-col flex-1 gap-2" p="lg" rounded="lg">
+    <GlassBox className="flex flex-col flex-1 gap-2 min-w-[150px]" p="lg" rounded="xl">
       <Text size="3xl" weight="medium">{value}</Text>
       <Text size="sm" variant="muted">{label}</Text>
     </GlassBox>

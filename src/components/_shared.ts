@@ -1,15 +1,16 @@
 // ----- BORDER RADIUS -----
-export type BORDER_RADIUSES_PROPS = "none" | "sm" | "md" | "lg" | "full";
+export type BORDER_RADIUSES_PROPS = "none" | "sm" | "md" | "lg" | "xl" | "full";
 
 export const BORDER_RADIUSES: Record<BORDER_RADIUSES_PROPS, string> = {
     none: "rounded-none",
     sm: "rounded-sm",
     md: "rounded-md",
     lg: "rounded-xl",
+    xl: "rounded-3xl",
     full: "rounded-full",
 };
 
-export const DEFAULT_BORDER_RADIUS: BORDER_RADIUSES_PROPS = "md";
+export const DEFAULT_BORDER_RADIUS: BORDER_RADIUSES_PROPS = "lg";
 
 // ----- PADDING -----
 export type PADDINGS_PROPS = "none" | "sm" | "md" | "lg";
