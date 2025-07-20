@@ -6,9 +6,15 @@ import annualtyImg from "../../../../public/assets/images/p-annualty.png"
 import myshopImg from "../../../../public/assets/images/p-myshop.png"
 import myblogImg from "../../../../public/assets/images/p-blog.png"
 import chatImg from "../../../../public/assets/images/p-chat.png"
+import pacmanImg from "../../../../public/assets/images/p-pacman.png"
+import colorpickerImg from "../../../../public/assets/images/p-colorpicker.png"
+import weatherImg from "../../../../public/assets/images/p-weather.png"
+import yahooImg from "../../../../public/assets/images/p-yahoo.png"
+import oscarImg from "../../../../public/assets/images/p-oscar.png"
 import { Text } from "@/components/ui/Text";
 import MyLink from "@/components/ui/Link";
 import MyIcon from "@/app/icons";
+import Link from "next/link";
 
 // 🔠 Typ i obiekt obrazów
 const ProjectList = {
@@ -69,6 +75,77 @@ const ProjectList = {
       type: "Personal - Learning Purpose",
       time_spent: "2 weeks"
     }
+  },
+  Pacman: {
+    img: pacmanImg,
+    title: "Pac-Man (Vanilla JS Edition)",
+    description:
+      "Built as a break from frameworks, this pure JavaScript rendition of Pac-Man was my way of saying 'I still remember how the DOM works'. No React, no build tools — just ghosts, dots, and good old-fashioned fun.",
+    skills: ["HTML", "CSS", "JavaScript"],
+    app_url: "https://pac-man-psi.vercel.app/",
+    app_detail: "Go ahead and play — I'll wait.",
+    nerd_stats: {
+      commits: "10+",
+      type: "Personal - Just for Fun",
+      time_spent: "3 days"
+    }
+  },
+
+  Colorpicker: {
+    img: colorpickerImg,
+    title: "Color Picker (Course)",
+    description:
+      "A sleek color-picking tool developed during a React course to grasp component structure, state management, and local storage handling. Practical, reusable, and a solid intro to design systems.",
+    skills: ["React", "Local Storage", "CSS"],
+    app_url: "https://github.com/marcelmilosz/React-ColorPicker", // zmień jeśli zły link
+    app_detail: "Built while learning React fundamentals — turns out choosing colors is harder than writing the code.",
+    nerd_stats: {
+      commits: "20+",
+      type: "Personal - Udemy Course",
+      time_spent: "1 month of learning"
+    }
+  },
+  WeatherApp: {
+    img: weatherImg,
+    title: "Weather App",
+    description:
+      "A minimal weather-tracking application built to explore external APIs and real-time data fetching. Developed as a lightweight personal tool for checking forecasts and practicing clean API consumption.",
+    skills: ["JavaScript", "REST API", "Fetch"],
+    app_url: "https://github.com/marcelmilosz/React-WeatherApp",
+    app_detail: "Originally built to teach myself how to work with real-world weather APIs — and maybe decide whether to bring an umbrella.",
+    nerd_stats: {
+      commits: "10+",
+      type: "Personal - Just for Fun",
+      time_spent: "3 days"
+    }
+  },
+  YahooCharts: {
+    img: yahooImg,
+    title: "Yahoo Charts Scraper",
+    description:
+      "A Python-powered tool that scrapes financial data from Yahoo Finance, logs it into Excel sheets, and visualizes key trends using interactive charts. ",
+    skills: ["Python", "REST API", "Flask", "Excel"],
+    app_url: "https://github.com/marcelmilosz/YahooChartsScraper",
+    app_detail: "Created out of curiosity for how finance apps fetch and present real-time stock data.",
+    nerd_stats: {
+      commits: "5+",
+      type: "Personal - Built out of passion for finance",
+      time_spent: "3 days"
+    }
+  },
+  Oscar: {
+    img: oscarImg,
+    title: "Massage Therapist Website",
+    description:
+      "A fully responsive, modern landing page designed for a massage therapist client. Built to showcase services, establish online presence, and provide essential contact and location details.",
+    skills: ["Next.js", "React"],
+    app_url: "https://oskar-kubiak-marcelmiloszs-projects.vercel.app/",
+    app_detail: "Individually crafted project for a client in the wellness industry.",
+    nerd_stats: {
+      commits: "20+",
+      type: "Freelance - Client work",
+      time_spent: "7 days"
+    }
   }
 } as const
 
@@ -84,11 +161,23 @@ function Projects() {
 
       {/* <Gradient gradientName="hero" position="top-0 right-4" width="w-[500px]" /> */}
 
-      <div className="py-12 flex flex-col h-full relative min-h-[2000px] gap-8">
+      <div className="py-12 flex flex-col h-full relative min-h-max gap-8">
         <ProjectBox name="MyShop" className="sticky top-[1rem] z-[2]" />
         <ProjectBox name="Annualty" className="sticky top-[3rem] z-[3]" />
         <ProjectBox name="Messenger" className="sticky top-[5rem] z-[4]" />
         <ProjectBox name="Blog" className="sticky top-[7rem] z-[5]" />
+        <ProjectBox name="Pacman" className="sticky top-[9rem] z-[6]" />
+        <ProjectBox name="Colorpicker" className="sticky top-[11rem] z-[7]" />
+        <ProjectBox name="WeatherApp" className="sticky top-[13rem] z-[8]" />
+        <ProjectBox name="Oscar" className="sticky top-[15rem] z-[9]" />
+        <ProjectBox name="YahooCharts" className="sticky top-[17rem] z-[10]" />
+      </div>
+
+      <div>
+        <span className="text-sm text-[var(--color-text-muted)] font-light italic">
+          These are just a few of the many projects I&apos;ve built — both commercial and personal. Some were developed for real clients, others were born out of curiosity or completed as part of deep-dive courses on platforms like Udemy or Coursera. Many more sit quietly in my GitHub, waiting for their moment to shine.
+        </span>
+        <span className="text-sm text-[var(--color-text-muted)] font-light italic">You can find more projects on my github: <Link target="_blank" href="https://github.com/marcelmilosz?tab=repositories" className="text-[var(--color-white)]">https://github.com/marcelmilosz?tab=repositories </Link></span>
       </div>
 
     </LayoutWrapper>
@@ -112,13 +201,13 @@ function ProjectBox({ name, className = "" }: ProjectBoxProps) {
   const nerd_stats = ProjectList[name].nerd_stats ?? ""
 
   return (
-    <div style={{ background: "var(--color-project-box-gradient)" }} className={`backdrop-blur-xl w-full min-h-[250px] rounded-3xl p-12 max-md:p-6 shadow-[var(--color-project-box-shadow)] flex gap-8 items-center overflow-hidde ${className}`}>
+    <div style={{ background: "var(--color-project-box-gradient)" }} className={`backdrop-blur-xl w-full min-h-[250px] rounded-3xl p-12 max-md:p-6 shadow-[var(--color-project-box-shadow)] flex gap-8 items-center  ${className}`}>
 
-      <div className="overflow-hidden min-w-[300px] h-[250px] max-md:hidden">
+      <div className="overflow-hidden min-w-[350px] max-w-[350px] h-[250px] max-md:hidden">
         <Image
           src={image}
           alt={name}
-          width={300}
+          width={350}
           height={300}
           className="w-full h-full object-cover rounded-2xl"
         />
@@ -156,7 +245,7 @@ function ProjectBox({ name, className = "" }: ProjectBoxProps) {
           <div className="flex flex-col gap-1 pt-2 mt-8 items-end">
 
             {app_detail &&
-              <Text variant="muted" size="xs">{app_detail}</Text>
+              <Text variant="muted" size="xs" className="text-right">{app_detail}</Text>
             }
 
             {app_url &&
