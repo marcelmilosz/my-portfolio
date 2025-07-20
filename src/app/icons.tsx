@@ -7,6 +7,7 @@ import xIcon from "../../public/assets/icons/x.svg"
 import hashIcon from "../../public/assets/icons/hash.svg"
 import codeIcon from "../../public/assets/icons/code.svg"
 import arrowDownIcon from "../../public/assets/icons/arrow-down.svg"
+import userIcon from "../../public/assets/icons/user.svg"
 
 // Front 
 import pNextjsIcon from "../../public/assets/icons/p_nextjs.svg"
@@ -72,6 +73,7 @@ export type IconNames =
   | "code"
   | "social_linkedin"
   | "social_github"
+  | "user"
 
   // Frontend 
   | "p_nextjs"
@@ -157,7 +159,7 @@ const IconsSize = {
   md: "w-5 h-5",          // 20px
   lg: "w-6 h-6",          // 24px
   xl: "w-8 h-8",          // 32px
-  skillset: "w-[76px] h-[76px]"
+  skillset: "w-[64px] h-[64px]"
 }
 
 // Map of icon components
@@ -171,6 +173,7 @@ const ICONS_MAP: Record<IconNames, React.FC<SVGProps<SVGSVGElement>>> = {
   code: codeIcon,
   social_github: socialGithubIcon,
   social_linkedin: socialLinkedInIcon,
+  user: userIcon,
 
   // Front 
   p_nextjs: pNextjsIcon,

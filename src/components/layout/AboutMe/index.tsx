@@ -21,7 +21,7 @@ function AboutMe() {
     <LayoutWrapper className="w-full min-h-max" size="laptop" id="about-me">
 
       <div className="w-full h-full">
-        <SectionTitle title="About me" subtitle="In a nutshell" />
+        <SectionTitle title="About Me" subtitle="A Quick Dive Into My Journey" iconName="user" />
 
 
         <div className="py-8">
@@ -66,7 +66,7 @@ function StatsBox({
 
 function BT({ children }: { children: React.ReactNode }) {
   return (
-    <span className="font-semibold text-[var(--color-primary)]">{children}</span>
+    <span className="font-semibold text-[var(--color-secondary)]">{children}</span>
   )
 }
 

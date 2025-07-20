@@ -20,7 +20,7 @@ export function LayoutWrapper({ children, className = "", style, size = "desktop
   const LayoutSize = LayoutSizes[size]
 
   return (
-    <div className={`w-full px-8 max-sm:px-4 scroll-mt-[50px]`} id={id}>
+    <div className={`w-full px-8 max-sm:px-4`} id={id}>
       <div className={`mx-auto ${LayoutSize} ${className}`} style={style}>
         {children}
       </div>

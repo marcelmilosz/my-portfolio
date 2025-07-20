@@ -19,7 +19,7 @@ function Skills() {
         <div className="flex flex-col gap-4">
           <Text size="2xl" weight="semibold" variant="auto"> Web / Front-end </Text>
 
-          <div className="flex flex-wrap gap-4">
+          <div className="grid grid-cols-[repeat(auto-fit,minmax(120px,1fr))] max-w-full gap-4">
             <SkillBox iconName="p_nextjs" skillName="Next" tag="Advanced" />
             <SkillBox iconName="p_react" skillName="React" tag="Advanced" />
             <SkillBox iconName="p_js" skillName="JavaScript" tag="Advanced" />
@@ -38,7 +38,7 @@ function Skills() {
         <div className="flex flex-col gap-4">
           <Text size="2xl" weight="semibold" variant="auto"> UI/UX & Graphics </Text>
 
-          <div className="flex flex-wrap gap-4">
+          <div className="grid grid-cols-[repeat(auto-fit,minmax(120px,1fr))] max-w-full gap-4">
             <SkillBox iconName="s_figma" skillName="Figma" tag="Intermediate" />
             <SkillBox iconName="s_canva" skillName="Canva" tag="Intermediate" />
             <SkillBox iconName="s_ps" skillName="Adobe Photoshop" tag="Intermediate" />
@@ -50,12 +50,12 @@ function Skills() {
         <div className="flex flex-col gap-4">
           <Text size="2xl" weight="semibold" variant="auto"> Web / Back-end </Text>
 
-          <div className="flex flex-wrap gap-4">
+          <div className="grid grid-cols-[repeat(auto-fit,minmax(120px,1fr))] max-w-full gap-4">
             <SkillBox iconName="p_django" skillName="Django" tag="Advanced" />
             {/* <SkillBox iconName="p_django_rest" skillName="Django REST framework" /> */}
             <SkillBox iconName="p_flask" skillName="Flask (Python)" iconVariant="auto" />
             <SkillBox iconName="p_php" iconFill={false} skillName="Php" />
-            <SkillBox iconName="p_google_cloud" skillName="Google Cloud services" />
+            <SkillBox iconName="p_google_cloud" skillName="Google Cloud" />
             <SkillBox iconName="p_heroku" skillName="Heroku" tag="Intermediate" />
             <SkillBox iconName="p_nodejs" skillName="Node.js" />
             <SkillBox iconName="p_postman" skillName="Postman" />
@@ -69,7 +69,7 @@ function Skills() {
         <div className="flex flex-col gap-4">
           <Text size="2xl" weight="semibold" variant="auto"> Data Science / Statistics </Text>
 
-          <div className="flex flex-wrap gap-4">
+          <div className="grid grid-cols-[repeat(auto-fit,minmax(120px,1fr))] max-w-full gap-4">
             <SkillBox iconName="ds_python" skillName="Python" tag="Advanced" />
             <SkillBox iconName="ds_numpy" skillName="Numpy" tag="Intermediate" />
             <SkillBox iconName="ds_pandas" skillName="Pandas" tag="Intermediate" />
@@ -84,19 +84,21 @@ function Skills() {
         <div className="flex flex-col gap-4">
           <Text size="2xl" weight="semibold" variant="auto"> Bare Metal & Beyond </Text>
 
-          <div className="flex flex-wrap gap-4">
+          <div className="grid grid-cols-[repeat(auto-fit,minmax(120px,1fr))] max-w-full gap-4">
             <SkillBox iconName="l_cpp" skillName="C++" tag="Intermediate" />
             <SkillBox iconName="l_c" skillName="C" tag="Learning" />
             <SkillBox iconName="l_asm" skillName="Assembly Language (Nasm)" tag="Learning" />
             <SkillBox iconName="l_arduino" skillName="Arduino" />
           </div>
         </div>
-
-
-        <span className="text-sm text-[var(--color-text-muted)] font-light italic">
-          Each skill listed here is either one I excel at, have used in commercial projects, or explored through personal projects—always with at least a solid grasp of the fundamentals.
-        </span>
       </div>
+
+
+
+
+      <span className="text-sm text-[var(--color-text-muted)] font-light italic">
+        Each skill listed here is either one I excel at, have used in commercial projects, or explored through personal projects—always with at least a solid grasp of the fundamentals.
+      </span>
 
     </LayoutWrapper>
   )
@@ -112,20 +114,24 @@ type SkillBoxProps = {
 
 function SkillBox({ iconName, iconVariant = "auto", iconFill = true, skillName = "", tag = "" }: SkillBoxProps) {
   return (
-    <div className={`bg-[var(--color-glass-box)] max-w-[350px] flex-1 min-w-max max-md:min-w-[120px] relative overflow-hidden ${BORDER_RADIUSES[DEFAULT_BORDER_RADIUS]} flex flex-col gap-2 items-center group  transition-all duration-200`}>
+    <div className={`bg-[var(--color-glass-box)] px-8 p-7 max-md:px-4 max-sm:px-2  relative overflow-hidden ${BORDER_RADIUSES[DEFAULT_BORDER_RADIUS]} flex flex-col gap-2 items-center group`}>
 
       {tag &&
         <SkillTag tag={tag} />
       }
-      <div className="px-8 p-4 max-md:px-4 max-sm:px-2 grayscale-[100%] group-hover:grayscale-0 ">
+      <div className="grayscale-[100%] group-hover:grayscale-0 transition-all duration-200">
         <MyIcon iconName={iconName} iconFill={iconFill} iconSize="skillset" iconVariant={iconVariant} />
       </div>
 
-      <div className="bg-[var(--color-glass-box)] p-3 w-full h-full shadow-[var(--color-tag-shadow)] ">
+      <div className="hidden group-hover:flex absolute bottom-[10px] left-0 mx-auto w-full items-center justify-center px-4   transition-all duration-200">
+        <Text size="xs" weight="semibold" variant="muted" className="group-hover:text-white transition-colors">{skillName}</Text>
+      </div>
+
+      {/* <div className="bg-[var(--color-glass-box)] p-3 w-full h-full shadow-[var(--color-tag-shadow)] ">
         {skillName &&
           <Text size="xs" weight="semibold" variant="muted" className="group-hover:text-white transition-colors">{skillName}</Text>
         }
-      </div>
+      </div> */}
     </div>
   )
 }
