@@ -11,10 +11,12 @@ import colorpickerImg from "../../../../public/assets/images/p-colorpicker.png"
 import weatherImg from "../../../../public/assets/images/p-weather.png"
 import yahooImg from "../../../../public/assets/images/p-yahoo.png"
 import oscarImg from "../../../../public/assets/images/p-oscar.png"
+import frndImg from "../../../../public/assets/images/p-frnd.png"
 import { Text } from "@/components/ui/Text";
 import MyLink from "@/components/ui/Link";
 import MyIcon from "@/app/icons";
 import Link from "next/link";
+import { useStickyState } from "@/hooks/useStickyObserver";
 
 // 🔠 Typ i obiekt obrazów
 const ProjectList = {
@@ -119,6 +121,20 @@ const ProjectList = {
       time_spent: "3 days"
     }
   },
+  Frnd: {
+    img: frndImg,
+    title: "Frnd (Tinder Clone)",
+    description:
+      "A dating app experiment built to understand how Tinder-like platforms handle swiping logic, real-time matches, and user interaction flows. No roses, just algorithms.",
+    skills: ["Node.js", "JavaScript", "MongoDB"],
+    app_url: "",
+    app_detail: "Created as a fun technical deep dive into matchmaking mechanics and user-based recommendation systems.",
+    nerd_stats: {
+      commits: "25+",
+      type: "Personal -  Built to reverse-engineer the logic behind Tinder",
+      time_spent: "7 days"
+    }
+  },
   YahooCharts: {
     img: yahooImg,
     title: "Yahoo Charts Scraper",
@@ -151,6 +167,32 @@ const ProjectList = {
 
 type ProjectName = keyof typeof ProjectList
 
+const projectNames: ProjectName[] = [
+  "MyShop",
+  "Annualty",
+  "Messenger",
+  "Frnd",
+  "Blog",
+  "Pacman",
+  "Colorpicker",
+  "WeatherApp",
+  "Oscar",
+  "YahooCharts"
+]
+
+const stickyTopClasses = [
+  "top-[1rem]",
+  "top-[2rem]",
+  "top-[3rem]",
+  "top-[4rem]",
+  "top-[5rem]",
+  "top-[6rem]",
+  "top-[7rem]",
+  "top-[8rem]",
+  "top-[9rem]",
+  "top-[10rem]",
+]
+
 function Projects() {
   return (
     <LayoutWrapper className="w-full min-h-screen relative" size="laptop" id="about-me">
@@ -162,15 +204,19 @@ function Projects() {
       {/* <Gradient gradientName="hero" position="top-0 right-4" width="w-[500px]" /> */}
 
       <div className="py-12 flex flex-col h-full relative min-h-max gap-8">
-        <ProjectBox name="MyShop" className="sticky top-[1rem] z-[2]" />
-        <ProjectBox name="Annualty" className="sticky top-[3rem] z-[3]" />
-        <ProjectBox name="Messenger" className="sticky top-[5rem] z-[4]" />
-        <ProjectBox name="Blog" className="sticky top-[7rem] z-[5]" />
-        <ProjectBox name="Pacman" className="sticky top-[9rem] z-[6]" />
-        <ProjectBox name="Colorpicker" className="sticky top-[11rem] z-[7]" />
-        <ProjectBox name="WeatherApp" className="sticky top-[13rem] z-[8]" />
-        <ProjectBox name="Oscar" className="sticky top-[15rem] z-[9]" />
-        <ProjectBox name="YahooCharts" className="sticky top-[17rem] z-[10]" />
+        {projectNames.map((name, index) => {
+          const stickyTop = 16 + index * 16 // each next by 1rem (16px)
+
+          return (
+            <ProjectBox
+              key={name}
+              name={name}
+              stickyTop={stickyTop}
+              index={index}
+              className={`sticky ${stickyTopClasses[index]} z-[${index + 1}]`}
+            />
+          )
+        })}
       </div>
 
       <div>
@@ -187,9 +233,14 @@ function Projects() {
 type ProjectBoxProps = {
   name: ProjectName
   className?: string
+  stickyTop: number
+  index: number
 }
 
-function ProjectBox({ name, className = "" }: ProjectBoxProps) {
+function ProjectBox({ name, className = "", stickyTop, index }: ProjectBoxProps) {
+
+  const { ref, isSticky } = useStickyState(stickyTop) // 20px margines górny
+
   const image = ProjectList[name].img
   const title = ProjectList[name].title
   const desc = ProjectList[name].description
@@ -200,61 +251,68 @@ function ProjectBox({ name, className = "" }: ProjectBoxProps) {
 
   const nerd_stats = ProjectList[name].nerd_stats ?? ""
 
+  const scaleFactor = isSticky ? 1 - (projectNames.length - index) * 0.02 : 1
+
   return (
-    <div style={{ background: "var(--color-project-box-gradient)" }} className={`backdrop-blur-xl w-full min-h-[250px] rounded-3xl p-12 max-md:p-6 shadow-[var(--color-project-box-shadow)] flex gap-8 items-center  ${className}`}>
+    <div ref={ref} className={`sticky ${className}`}>
+      <div
+        className="
+      transition-all duration-300 ease-in-out
+      backdrop-blur-xl w-full min-h-[250px] rounded-3xl p-12 max-md:p-6
+      shadow-[var(--color-project-box-shadow)] flex gap-8 items-center
+    "
+        style={{
+          background: "var(--color-project-box-gradient)",
+          transform: `scale(${scaleFactor})`,
+          opacity: isSticky ? 0.8 : 1,
+        }}
+      >
+        <div className="overflow-hidden min-w-[350px] max-w-[350px] h-[250px] max-md:hidden">
+          <Image
+            src={image}
+            alt={name}
+            width={350}
+            height={300}
+            className="w-full h-full object-cover rounded-2xl"
+          />
+        </div>
 
-      <div className="overflow-hidden min-w-[350px] max-w-[350px] h-[250px] max-md:hidden">
-        <Image
-          src={image}
-          alt={name}
-          width={350}
-          height={300}
-          className="w-full h-full object-cover rounded-2xl"
-        />
-      </div>
+        <div className="flex flex-col w-full">
+          <div className="w-full flex items-center justify-between gap-4">
+            <div className="w-full py-4 opacity-50 overflow-x-auto whitespace-nowrap no-scrollbar flex flex-wrap gap-2">
+              {skills.map((skill, idx) => (
+                <div
+                  key={idx}
+                  className="bg-[var(--color-glass-box)] px-2 py-1 rounded-full border border-[var(--color-white)]"
+                >
+                  <Text size="xs">{skill}</Text>
+                </div>
+              ))}
+            </div>
 
-      <div className="flex flex-col w-full">
-
-        <div className="w-full flex items-center justify-between gap-4">
-          <div className="w-full py-4 opacity-50 overflow-x-auto whitespace-nowrap no-scrollbar flex flex-wrap gap-2">
-            {skills.map((skill, idx) => (
-              <div
-                key={idx}
-                className="bg-[var(--color-glass-box)]  px-2 py-1 rounded-full border border-[var(--color-white)]"
-              >
-                <Text size="xs">{skill}</Text>
+            <div className="opacity-50 hover:opacity-100 relative group">
+              <MyIcon iconName="info" iconSize="lg" iconStroke="1.5" />
+              <div className="w-[200px] hidden group-hover:flex min-h-max p-3 bg-[var(--color-black)] absolute top-[-10px] right-[30px] rounded-md rounded-tr-none flex-col gap-2">
+                <Text variant="auto" size="xs"><b>Type:</b> {nerd_stats.type}</Text>
+                <Text variant="auto" size="xs"><b>Commits:</b> {nerd_stats.commits}</Text>
+                <Text variant="auto" size="xs"><b>Time spent:</b> {nerd_stats.time_spent}</Text>
               </div>
-            ))}
+            </div>
           </div>
 
-          <div className="opacity-50 hover:opacity-100 relative group">
-            <MyIcon iconName="info" iconSize="lg" iconStroke="1.5" />
+          <div className="w-full">
+            <Text weight="bold" size="3xl" className="mb-2">{title}</Text>
+            <Text weight="normal" size="sm" variant="auto">{desc}</Text>
 
-            <div className="w-[200px] hidden group-hover:flex min-h-max p-3 bg-[var(--color-black)] absolute top-[-10px] right-[30px] rounded-md rounded-tr-none flex-col gap-2">
-              <Text variant="auto" size="xs"><b>Type:</b> {nerd_stats.type}</Text>
-              <Text variant="auto" size="xs"><b>Commits:</b> {nerd_stats.commits}</Text>
-              <Text variant="auto" size="xs"><b>Time spent:</b> {nerd_stats.time_spent}</Text>
+            <div className="flex flex-col gap-1 pt-2 mt-8 items-end">
+              {app_detail && (
+                <Text variant="muted" size="xs" className="text-right">{app_detail}</Text>
+              )}
+              {app_url && <MyLink href={app_url} target="_blank" />}
             </div>
           </div>
         </div>
-
-        <div className="w-full">
-          <Text weight="bold" size="3xl" className="mb-2">{title}</Text>
-          <Text weight="normal" size="sm" variant="auto">{desc}</Text>
-
-          <div className="flex flex-col gap-1 pt-2 mt-8 items-end">
-
-            {app_detail &&
-              <Text variant="muted" size="xs" className="text-right">{app_detail}</Text>
-            }
-
-            {app_url &&
-              <MyLink href={app_url} target="_blank" />
-            }
-          </div>
-        </div>
       </div>
-
     </div>
   )
 }
