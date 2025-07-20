@@ -56,6 +56,7 @@ function Skills() {
             <SkillBox iconName="p_flask" skillName="Flask (Python)" iconVariant="auto" />
             <SkillBox iconName="p_php" iconFill={false} skillName="Php" />
             <SkillBox iconName="p_google_cloud" skillName="Google Cloud" />
+            <SkillBox iconName="p_firebase" skillName="Firebase" />
             <SkillBox iconName="p_heroku" skillName="Heroku" tag="Intermediate" />
             <SkillBox iconName="p_nodejs" skillName="Node.js" />
             <SkillBox iconName="p_postman" skillName="Postman" />
@@ -63,6 +64,7 @@ function Skills() {
             <SkillBox iconName="p_postgres" skillName="PostgreSQL" tag="Intermediate" />
             <SkillBox iconName="p_mongo" skillName="Mongo" tag="Intermediate" />
             <SkillBox iconName="p_aws" skillName="AWS" />
+            <SkillBox iconName="p_docker" skillName="Docker" />
           </div>
         </div>
 

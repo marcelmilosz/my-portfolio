@@ -8,13 +8,17 @@ import Image from "next/image";
 import MyIcon from "@/app/icons";
 import Link from "next/link";
 import { ScrollTo } from "@/components/common/ScrollTo";
+import { Gradient } from "@/components/ui/Gradient";
 
 // type Props = {};
 
 function LandingPage() {
   return (
-    <main className="w-full h-screen relative">
+    <main className="w-full h-screen relative overflow-hidden">
       <Navbar />
+
+      <Gradient gradientName="hero" position="left-1/3 top-[-100px]" width="w-[1500px]" />
+      <Gradient gradientName="hero2" position="top-[400px] left-4" width="w-[500px]" />
 
       <LayoutWrapper className={`h-(--landing-height)`}>
 

@@ -8,6 +8,8 @@ import hashIcon from "../../public/assets/icons/hash.svg"
 import codeIcon from "../../public/assets/icons/code.svg"
 import arrowDownIcon from "../../public/assets/icons/arrow-down.svg"
 import userIcon from "../../public/assets/icons/user.svg"
+import folderIcon from "../../public/assets/icons/folder.svg"
+import infoIcon from "../../public/assets/icons/info.svg"
 
 // Front 
 import pNextjsIcon from "../../public/assets/icons/p_nextjs.svg"
@@ -35,6 +37,8 @@ import pSql from "../../public/assets/icons/p_sql.svg"
 import pPostgres from "../../public/assets/icons/p_postgresql.svg"
 import pMongo from "../../public/assets/icons/p_mongo.svg"
 import pAws from "../../public/assets/icons/p_aws.svg"
+import pDocker from "../../public/assets/icons/p_docker.svg"
+import pFirebase from "../../public/assets/icons/p_firebase.svg"
 
 // DS
 import dsJupyter from "../../public/assets/icons/ds_jupyter.svg"
@@ -74,6 +78,8 @@ export type IconNames =
   | "social_linkedin"
   | "social_github"
   | "user"
+  | "folder"
+  | "info"
 
   // Frontend 
   | "p_nextjs"
@@ -101,6 +107,8 @@ export type IconNames =
   | "p_postgres"
   | "p_mongo"
   | "p_aws"
+  | "p_docker"
+  | "p_firebase"
 
   // DS
   | "ds_jupyter"
@@ -174,6 +182,8 @@ const ICONS_MAP: Record<IconNames, React.FC<SVGProps<SVGSVGElement>>> = {
   social_github: socialGithubIcon,
   social_linkedin: socialLinkedInIcon,
   user: userIcon,
+  folder: folderIcon,
+  info: infoIcon,
 
   // Front 
   p_nextjs: pNextjsIcon,
@@ -201,6 +211,8 @@ const ICONS_MAP: Record<IconNames, React.FC<SVGProps<SVGSVGElement>>> = {
   p_mongo: pMongo,
   p_postgres: pPostgres,
   p_aws: pAws,
+  p_docker: pDocker,
+  p_firebase: pFirebase,
 
   // DS
   ds_jupyter: dsJupyter,
