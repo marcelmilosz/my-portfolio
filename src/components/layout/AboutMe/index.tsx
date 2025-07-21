@@ -2,7 +2,7 @@
 import SectionTitle from "@/components/common/SectionTitle";
 import { Gradient } from "@/components/ui/Gradient";
 import { Text } from "@/components/ui/Text";
-import { GlassBox, LayoutWrapper } from "@/components/wrappers";
+import { LayoutWrapper } from "@/components/wrappers";
 import React from "react";
 
 // type Props = {};
@@ -60,10 +60,15 @@ function StatsBox({
   value
 }: { label: string, value: string }) {
   return (
-    <GlassBox className="flex flex-col flex-1 gap-2 min-w-[150px]" p="lg" rounded="xl">
+    <div
+      className="backdrop-blur-md rounded-3xl p-6 flex-1 shadow-[var(--color-project-box-shadow)] flex flex-col gap-2 min-w-[150px]"
+      style={{
+        background: "var(--color-project-box-gradient)",
+      }}
+    >
       <Text size="3xl" weight="medium">{value}</Text>
       <Text size="sm" variant="muted">{label}</Text>
-    </GlassBox>
+    </div>
   )
 }
 

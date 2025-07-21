@@ -264,7 +264,6 @@ function ProjectBox({ name, className = "", stickyTop, index }: ProjectBoxProps)
         style={{
           background: "var(--color-project-box-gradient)",
           transform: `scale(${scaleFactor})`,
-          opacity: isSticky ? 0.8 : 1,
         }}
       >
         <div className="overflow-hidden min-w-[350px] max-w-[350px] h-[250px] max-md:hidden">

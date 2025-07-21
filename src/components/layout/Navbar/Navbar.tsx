@@ -51,7 +51,7 @@ function Navbar() {
         {/* Actions  */}
         <div className="flex gap-4 w-full max-w-[200px] items-center justify-end">
           <Button onClick={() => toggleTheme()} shape="circle" rounded="full" variant="glass" p="sm" className="min-h-[40px] min-w-[40px] max-md:hidden">
-            <MyIcon iconName={theme === "dark" ? "moon" : "sun"} iconSize="md" />
+            <MyIcon iconName={theme === "dark" ? "moon" : "sun"} iconSize="md" iconStroke="1.5" />
           </Button>
           <Button rounded="full" variant="glass" p="md" className="max-[350px]:hidden">Contact me</Button>
 
@@ -70,7 +70,7 @@ type NavbarLinkProps = {
 function NavbarLink({ children, href = "" }: NavbarLinkProps) {
   return (
     <Link href={href}>
-      <Text weight="light" className="whitespace-nowrap select-none p-2 px-5 rounded-lg hover:bg-[var(--color-glass-box-hover)] cursor-pointer duration-100 transition-all">{children}</Text>
+      <Text weight="normal" className="whitespace-nowrap select-none p-2 px-5 rounded-lg hover:bg-[var(--color-glass-box-hover)] cursor-pointer duration-100 transition-all">{children}</Text>
     </Link>
   )
 }

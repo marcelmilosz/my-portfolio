@@ -36,11 +36,11 @@ export function ScrollToTopButton() {
             aria-label="Scroll to top"
             variant="glass"
             shape="circle"
-            rounded="full"
-            className="backdrop-blur-3xl"
-            shapeSize="w-12 h-12"
+            rounded="xl"
+            className="backdrop-blur-md"
+            shapeSize="w-14 h-14"
           >
-            <MyIcon iconName="arrow_down" iconRotateVertically />
+            <MyIcon iconName="arrow_down" iconRotateVertically iconSize="xl" iconStroke="2" />
           </Button>
         </motion.div>
       )}

@@ -73,7 +73,7 @@ export function Button({
       disabled={disabled}
       className={`${btnBase} ${variantBase} ${variantHover} ${variantShadow} ${disabledStyles} ${variantBorder} ${className}`}
     >
-      <Text size="base" weight="light">{children}</Text>
+      <Text size="base" weight="normal">{children}</Text>
     </button>
   )
 }

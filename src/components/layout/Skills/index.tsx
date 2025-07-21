@@ -78,7 +78,7 @@ function Skills() {
             <SkillBox iconName="ds_R" skillName="R" tag="Intermediate" />
             <SkillBox iconName="ds_excel" skillName="Excel" tag="Intermediate" />
             <SkillBox iconName="ds_scikit" skillName="Scikit learn" />
-            <SkillBox iconName="ds_selenium" skillName="Selenium" />
+            <SkillBox iconName="ds_selenium" skillName="Selenium" tag="Intermediate" />
             <SkillBox iconName="ds_jupyter" skillName="Jupyter" />
           </div>
         </div>
