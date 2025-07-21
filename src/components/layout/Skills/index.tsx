@@ -1,5 +1,6 @@
 import MyIcon, { IconNames, IconVariantProps } from "@/app/icons";
 import { BORDER_RADIUSES, DEFAULT_BORDER_RADIUS } from "@/components/_shared";
+import { FramerTopBottomOpacity } from "@/components/common/FramerWrappers";
 import SectionTitle from "@/components/common/SectionTitle";
 import { Text } from "@/components/ui/Text";
 import { LayoutWrapper } from "@/components/wrappers";
@@ -16,10 +17,11 @@ function Skills() {
       </div>
 
       <div className="py-12 flex flex-col gap-24">
-        <div className="flex flex-col gap-4">
+        <FramerTopBottomOpacity className="flex flex-col gap-4">
           <Text size="2xl" weight="semibold" variant="auto"> Web / Front-end </Text>
 
           <div className="grid grid-cols-[repeat(auto-fit,minmax(120px,1fr))] max-w-full gap-4">
+
             <SkillBox iconName="p_nextjs" skillName="Next" tag="Advanced" />
             <SkillBox iconName="p_react" skillName="React" tag="Advanced" />
             <SkillBox iconName="p_js" skillName="JavaScript" tag="Advanced" />
@@ -32,10 +34,10 @@ function Skills() {
             <SkillBox iconName="p_bulma" skillName="Bulma" />
             <SkillBox iconName="p_jest" skillName="Jest" />
           </div>
-        </div>
+        </FramerTopBottomOpacity>
 
 
-        <div className="flex flex-col gap-4">
+        <FramerTopBottomOpacity className="flex flex-col gap-4">
           <Text size="2xl" weight="semibold" variant="auto"> UI/UX & Graphics </Text>
 
           <div className="grid grid-cols-[repeat(auto-fit,minmax(120px,1fr))] max-w-full gap-4">
@@ -45,9 +47,9 @@ function Skills() {
             <SkillBox iconName="s_ai" skillName="Adobe Illustrator" tag="Intermediate" />
             <SkillBox iconName="s_xd" skillName="Adobe Xd" tag="Familiar" />
           </div>
-        </div>
+        </FramerTopBottomOpacity>
 
-        <div className="flex flex-col gap-4">
+        <FramerTopBottomOpacity className="flex flex-col gap-4">
           <Text size="2xl" weight="semibold" variant="auto"> Web / Back-end </Text>
 
           <div className="grid grid-cols-[repeat(auto-fit,minmax(120px,1fr))] max-w-full gap-4">
@@ -66,9 +68,9 @@ function Skills() {
             <SkillBox iconName="p_aws" skillName="AWS" />
             <SkillBox iconName="p_docker" skillName="Docker" />
           </div>
-        </div>
+        </FramerTopBottomOpacity>
 
-        <div className="flex flex-col gap-4">
+        <FramerTopBottomOpacity className="flex flex-col gap-4">
           <Text size="2xl" weight="semibold" variant="auto"> Data Science / Statistics </Text>
 
           <div className="grid grid-cols-[repeat(auto-fit,minmax(120px,1fr))] max-w-full gap-4">
@@ -81,9 +83,9 @@ function Skills() {
             <SkillBox iconName="ds_selenium" skillName="Selenium" tag="Intermediate" />
             <SkillBox iconName="ds_jupyter" skillName="Jupyter" />
           </div>
-        </div>
+        </FramerTopBottomOpacity>
 
-        <div className="flex flex-col gap-4">
+        <FramerTopBottomOpacity className="flex flex-col gap-4">
           <Text size="2xl" weight="semibold" variant="auto"> Bare Metal & Beyond </Text>
 
           <div className="grid grid-cols-[repeat(auto-fit,minmax(120px,1fr))] max-w-full gap-4">
@@ -92,15 +94,16 @@ function Skills() {
             <SkillBox iconName="l_asm" skillName="Assembly Language (Nasm)" tag="Learning" />
             <SkillBox iconName="l_arduino" skillName="Arduino" />
           </div>
-        </div>
+        </FramerTopBottomOpacity>
       </div>
 
 
 
-
-      <span className="text-sm text-[var(--color-text-muted)] font-light italic">
-        Each skill listed here is either one I excel at, have used in commercial projects, or explored through personal projects—always with at least a solid grasp of the fundamentals.
-      </span>
+      <FramerTopBottomOpacity>
+        <span className="text-sm text-[var(--color-text-muted)] font-light italic">
+          Each skill listed here is either one I excel at, have used in commercial projects, or explored through personal projects—always with at least a solid grasp of the fundamentals.
+        </span>
+      </FramerTopBottomOpacity>
 
     </LayoutWrapper>
   )

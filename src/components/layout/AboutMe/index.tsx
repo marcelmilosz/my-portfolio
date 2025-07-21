@@ -1,4 +1,5 @@
 
+import { FramerBoxSlideIn, FramerTopBottomOpacity } from "@/components/common/FramerWrappers";
 import SectionTitle from "@/components/common/SectionTitle";
 import { Gradient } from "@/components/ui/Gradient";
 import { Text } from "@/components/ui/Text";
@@ -27,7 +28,7 @@ function AboutMe() {
         <SectionTitle title="About Me" subtitle="A Quick Dive Into My Journey" iconName="user" />
 
 
-        <div className="py-8">
+        <FramerTopBottomOpacity className="py-8">
           <Text size="base" className="leading-8">
             Hey, I&apos;m Marcel — a Full-Stack Developer by day, Data Science grad by degree, and code enthusiast since 2016.
 
@@ -43,11 +44,11 @@ function AboutMe() {
               Additional note <br /> I ran a product photography studio for two years — which means I&apos;ve spent more time in Photoshop than I&apos;d like to admit. From setting up lights to handling clients, it taught me a lot about visual storytelling, working with people, and making pixels look pretty.
             </span>
           </Text>
-        </div>
+        </FramerTopBottomOpacity>
 
         <div className="flex gap-4 flex-wrap py-8">
-          {HIGHLIGHTS.map((item) => (
-            <StatsBox key={item.label} label={item.label} value={item.value} />
+          {HIGHLIGHTS.map((item, idx) => (
+            <StatsBox key={item.label} label={item.label} value={item.value} idx={idx} />
           ))}
         </div>
       </div>
@@ -57,18 +58,21 @@ function AboutMe() {
 
 function StatsBox({
   label,
-  value
-}: { label: string, value: string }) {
+  value,
+  idx
+}: { label: string, value: string, idx: number }) {
   return (
-    <div
+    <FramerBoxSlideIn
+      idx={idx}
       className="backdrop-blur-md rounded-3xl p-6 flex-1 shadow-[var(--color-project-box-shadow)] flex flex-col gap-2 min-w-[150px]"
       style={{
         background: "var(--color-project-box-gradient)",
       }}
     >
+
       <Text size="3xl" weight="medium">{value}</Text>
       <Text size="sm" variant="muted">{label}</Text>
-    </div>
+    </FramerBoxSlideIn>
   )
 }
 

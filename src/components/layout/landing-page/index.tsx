@@ -16,8 +16,15 @@ import { motion } from "framer-motion";
 function LandingPage() {
   return (
     <main className="w-full h-screen relative overflow-hidden">
-      <Navbar />
 
+      <motion.div
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.2 }}
+
+      >
+        <Navbar />
+      </motion.div>
       <Gradient gradientName="hero" position="left-1/3 top-[-100px]" width="w-[1500px]" />
       <Gradient gradientName="hero2" position="top-[400px] left-4" width="w-[500px]" />
 
@@ -30,6 +37,7 @@ function LandingPage() {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4 }}
+
           >
             <GlassBox className="flex gap-2 items-center p-2" rounded="full" p="none">
               <div className="overflow-hidden w-[64px] h-[64px] min-w-[64px] min-h-[64px]" >
@@ -61,7 +69,7 @@ function LandingPage() {
           <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4 }}
+            transition={{ duration: 0.4, delay: 0.1 }}
           >
             <div className="flex flex-col pt-12 gap-4">
               <Text className="custom-gradient-text" size="hero" weight="bold">
@@ -70,22 +78,34 @@ function LandingPage() {
               <Text weight="light" size="base">Web, Data Science & Low-Level Programming Enthusiast</Text>
             </div>
           </motion.div>
+
           {/* Socials  */}
-          <div className="flex pt-12 gap-4">
-            <Link href="https://github.com/marcelmilosz" target="_blank"><MyIcon iconName="social_github" /></Link>
-            <Link href="https://www.linkedin.com/in/marcelmilosz/" target="_blank"><MyIcon iconName="social_linkedin" /></Link>
-          </div>
-
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: 0.2 }}
+          >
+            <div className="flex pt-12 gap-4">
+              <Link href="https://github.com/marcelmilosz" target="_blank"><MyIcon iconName="social_github" /></Link>
+              <Link href="https://www.linkedin.com/in/marcelmilosz/" target="_blank"><MyIcon iconName="social_linkedin" /></Link>
+            </div>
+          </motion.div>
         </div>
-
-
         <ScrollTo id="about-me">
-          <div className="w-full h-max absolute left-0 bottom-0 py-2 flex flex-col gap-2 items-center justify-center cursor-pointer">
-            <Text size="xs" weight="normal">A bit about me</Text>
-            <div className="animate-bounce"><MyIcon iconName="arrow_down" /></div>
-          </div>
-        </ScrollTo>
 
+
+          <motion.div
+            initial={{ opacity: 0, bottom: -10 }}
+            animate={{ opacity: 1, bottom: 0 }}
+            transition={{ duration: 0.4 }}
+
+          >
+            <div className="w-full h-max absolute left-0 bottom-0 py-2 flex flex-col gap-2 items-center justify-center cursor-pointer">
+              <Text size="xs" weight="normal">A bit about me</Text>
+              <div className="animate-bounce"><MyIcon iconName="arrow_down" /></div>
+            </div>
+          </motion.div>
+        </ScrollTo>
       </LayoutWrapper >
     </main >
   );

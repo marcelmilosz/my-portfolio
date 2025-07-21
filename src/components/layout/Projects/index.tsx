@@ -17,6 +17,7 @@ import MyLink from "@/components/ui/Link";
 import MyIcon from "@/app/icons";
 import Link from "next/link";
 import { useStickyState } from "@/hooks/useStickyObserver";
+import { FramerTopBottomOpacity } from "@/components/common/FramerWrappers";
 
 // 🔠 Typ i obiekt obrazów
 const ProjectList = {
@@ -219,12 +220,12 @@ function Projects() {
         })}
       </div>
 
-      <div>
+      <FramerTopBottomOpacity>
         <span className="text-sm text-[var(--color-text-muted)] font-light italic">
           These are just a few of the many projects I&apos;ve built — both commercial and personal. Some were developed for real clients, others were born out of curiosity or completed as part of deep-dive courses on platforms like Udemy or Coursera. Many more sit quietly in my GitHub, waiting for their moment to shine.
         </span>
         <span className="text-sm text-[var(--color-text-muted)] font-light italic">You can find more projects on my github: <Link target="_blank" href="https://github.com/marcelmilosz?tab=repositories" className="text-[var(--color-white)]">https://github.com/marcelmilosz?tab=repositories </Link></span>
-      </div>
+      </FramerTopBottomOpacity>
 
     </LayoutWrapper>
   );

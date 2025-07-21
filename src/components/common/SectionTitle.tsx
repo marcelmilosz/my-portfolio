@@ -2,6 +2,7 @@ import React from "react";
 import { Text } from "../ui/Text";
 import MyIcon, { IconNames } from "@/app/icons";
 import { GlassBox } from "../wrappers";
+import { FramerTopBottomOpacity } from "./FramerWrappers";
 
 type Props = {
   title: string,
@@ -11,7 +12,7 @@ type Props = {
 
 function SectionTitle({ title, subtitle, iconName = "hash" }: Props) {
   return (
-    <div className="flex gap-4 items-center pt-8">
+    <FramerTopBottomOpacity className="flex gap-4 items-center pt-8">
       {/* pt-4 is needed for scroll to better behaviour */}
 
       <GlassBox rounded="xl" className="min-w-[56px] min-h-[56px] flex items-center justify-center" p="none">
@@ -24,7 +25,7 @@ function SectionTitle({ title, subtitle, iconName = "hash" }: Props) {
           <Text size="base" weight="light" variant="auto">{subtitle}</Text>
         }
       </div>
-    </div>
+    </FramerTopBottomOpacity>
   )
 }
 

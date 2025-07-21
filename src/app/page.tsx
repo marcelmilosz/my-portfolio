@@ -10,10 +10,7 @@ export default function Home() {
   return (
     <div className="flex flex-col gap-32 pb-6 relative min-h-max">
 
-
       <LandingPage />
-
-
 
       <AboutMe />
 
