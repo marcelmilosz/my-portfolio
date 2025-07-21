@@ -56,3 +56,11 @@ export function Text({
 
   return <p className={styles}>{children}</p>;
 }
+
+export function SectionSummaryText({ children }: { children: React.ReactNode }) {
+  return (
+    <span className="text-sm text-[var(--color-text-muted)] font-light italic">
+      {children}
+    </span>
+  )
+}

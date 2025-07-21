@@ -2,7 +2,7 @@
 import { FramerBoxSlideIn, FramerTopBottomOpacity } from "@/components/common/FramerWrappers";
 import SectionTitle from "@/components/common/SectionTitle";
 import { Gradient } from "@/components/ui/Gradient";
-import { Text } from "@/components/ui/Text";
+import { SectionSummaryText, Text } from "@/components/ui/Text";
 import { LayoutWrapper } from "@/components/wrappers";
 import React from "react";
 
@@ -40,9 +40,9 @@ function AboutMe() {
             <br /><br />
             I&apos;m driven by clean code, continuous learning, and making the internet a bit more awesome — one commit at a time.
             <br /><br />
-            <span className="text-sm text-[var(--color-text-muted)] font-light italic">
+            <SectionSummaryText>
               Additional note <br /> I ran a product photography studio for two years — which means I&apos;ve spent more time in Photoshop than I&apos;d like to admit. From setting up lights to handling clients, it taught me a lot about visual storytelling, working with people, and making pixels look pretty.
-            </span>
+            </SectionSummaryText>
           </Text>
         </FramerTopBottomOpacity>
 

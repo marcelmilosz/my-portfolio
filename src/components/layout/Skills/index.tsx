@@ -2,7 +2,7 @@ import MyIcon, { IconNames, IconVariantProps } from "@/app/icons";
 import { BORDER_RADIUSES, DEFAULT_BORDER_RADIUS } from "@/components/_shared";
 import { FramerTopBottomOpacity } from "@/components/common/FramerWrappers";
 import SectionTitle from "@/components/common/SectionTitle";
-import { Text } from "@/components/ui/Text";
+import { SectionSummaryText, Text } from "@/components/ui/Text";
 import { LayoutWrapper } from "@/components/wrappers";
 import React from "react";
 
@@ -10,7 +10,7 @@ import React from "react";
 
 function Skills() {
   return (
-    <LayoutWrapper className="w-full min-h-screen" size="laptop" id="about-me">
+    <LayoutWrapper className="w-full min-h-max" size="laptop" id="about-me">
 
       <div className="w-full h-full">
         <SectionTitle title="My Skillset" subtitle="Languages, Tools & Technologies" iconName="code" />
@@ -100,9 +100,9 @@ function Skills() {
 
 
       <FramerTopBottomOpacity>
-        <span className="text-sm text-[var(--color-text-muted)] font-light italic">
+        <SectionSummaryText>
           Each skill listed here is either one I excel at, have used in commercial projects, or explored through personal projects—always with at least a solid grasp of the fundamentals.
-        </span>
+        </SectionSummaryText>
       </FramerTopBottomOpacity>
 
     </LayoutWrapper>

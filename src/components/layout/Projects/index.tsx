@@ -12,7 +12,7 @@ import weatherImg from "../../../../public/assets/images/p-weather.png"
 import yahooImg from "../../../../public/assets/images/p-yahoo.png"
 import oscarImg from "../../../../public/assets/images/p-oscar.png"
 import frndImg from "../../../../public/assets/images/p-frnd.png"
-import { Text } from "@/components/ui/Text";
+import { SectionSummaryText, Text } from "@/components/ui/Text";
 import MyLink from "@/components/ui/Link";
 import MyIcon from "@/app/icons";
 import Link from "next/link";
@@ -196,7 +196,7 @@ const stickyTopClasses = [
 
 function Projects() {
   return (
-    <LayoutWrapper className="w-full min-h-screen relative" size="laptop" id="about-me">
+    <LayoutWrapper className="w-full min-h-max relative" size="laptop" id="about-me">
 
       <div className="w-full h-full">
         <SectionTitle title="Projects That Shaped Me" subtitle="Both Commercial and Personal" iconName="folder" />
@@ -221,9 +221,9 @@ function Projects() {
       </div>
 
       <FramerTopBottomOpacity>
-        <span className="text-sm text-[var(--color-text-muted)] font-light italic">
+        <SectionSummaryText>
           These are just a few of the many projects I&apos;ve built — both commercial and personal. Some were developed for real clients, others were born out of curiosity or completed as part of deep-dive courses on platforms like Udemy or Coursera. Many more sit quietly in my GitHub, waiting for their moment to shine.
-        </span>
+        </SectionSummaryText>
         <span className="text-sm text-[var(--color-text-muted)] font-light italic">You can find more projects on my github: <Link target="_blank" href="https://github.com/marcelmilosz?tab=repositories" className="text-[var(--color-white)]">https://github.com/marcelmilosz?tab=repositories </Link></span>
       </FramerTopBottomOpacity>
 
