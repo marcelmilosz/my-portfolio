@@ -6,6 +6,7 @@
     --navbar-height-mobile: 80px;
     --landing-height: calc(100vh - 120px);
 
+    /* Gradients  */
     --gradient-hero: radial-gradient(circle at 40% 30%, rgba(63, 8, 151, 0.9), transparent 60%);
     --gradient-hero2: radial-gradient(circle at 10% 30%, rgba(34, 8, 151, 0.9), transparent 60%);
     --gradient-hero3: radial-gradient(circle at 10% 30%, rgba(172, 20, 103, 0.8), transparent 60%);
@@ -25,8 +26,8 @@
     --color-primary-secondary-gradient: linear-gradient(45deg, rgba(143, 80, 252, 1) 0%, rgba(219, 39, 119, 1) 100%);
 
     /* Glass box  */
-    --color-glass-box: rgba(255, 255, 255, 0.03);
-    --color-glass-box-hover: rgba(255, 255, 255, 0.05);
+    --color-glass-box: rgba(255, 255, 255, 0.05);
+    --color-glass-box-hover: rgba(255, 255, 255, 0.1);
 
     --color-glass-border: rgba(255, 255, 255, 0.2);
     --color-glass-shadow: 0 4px 16px rgba(0, 0, 0, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.3),
@@ -70,8 +71,6 @@
 
 [data-theme="dark"] {
     --background: #000;
-
-    --color-glass-box-hover: rgba(255, 255, 255, 0.05);
 }
 
 html {

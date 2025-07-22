@@ -64,7 +64,7 @@ function StatsBox({
   return (
     <FramerBoxSlideIn
       idx={idx}
-      className="backdrop-blur-md rounded-3xl p-6 flex-1 shadow-[var(--color-project-box-shadow)] flex flex-col gap-2 min-w-[150px]"
+      className="backdrop-blur-md rounded-xl p-6 flex-1 shadow-[var(--color-project-box-shadow)] flex flex-col gap-2 min-w-[150px]"
       style={{
         background: "var(--color-project-box-gradient)",
       }}
