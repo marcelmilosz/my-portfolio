@@ -50,8 +50,6 @@ export function HorizontalCertGallery({ images, title, subtitle }: HorizontalCer
               <ImageWithModal
                 src={img}
                 alt={`Certificate ${idx + 1}`}
-                width={150}
-                height={100}
                 className="object-cover w-full h-auto cursor-zoom-in hover:scale-[1.03] transition-transform duration-200 rounded-lg"
               />
             </div>

@@ -128,8 +128,16 @@ function CertDisplay({ cert }: { cert: CertificateType }) {
       <CertDetails cert={cert} className="lg:hidden" />
 
       {/* Main Image div  */}
-      <div className="flex-1">
-        <ImageWithModal src={cert.Specialization.image} width={768} height={512} alt={"Google specialization certificate"} className="rounded-2xl max-lg:w-full cursor-zoom-in transform-all duration-200 hover:scale-[1.02]  shadow-[var(--color-project-box-shadow)]" quality={100} unoptimized />
+      <div className="flex-1 max-w-[768px]">
+        <ImageWithModal
+          src={cert.Specialization.image}
+          width={768}
+          height={512}
+          alt="Google specialization certificate"
+          className="rounded-2xl cursor-zoom-in hover:scale-[1.02] transition-transform shadow-[var(--color-project-box-shadow)]"
+          quality={100}
+          unoptimized
+        />
       </div>
 
       <div className="flex-1 flex flex-col gap-8">
@@ -138,7 +146,7 @@ function CertDisplay({ cert }: { cert: CertificateType }) {
         <CertDetails cert={cert} className="max-lg:hidden" />
 
         {/* Sub Images  */}
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(100px,1fr))] max-lg:grid-cols-[repeat(auto-fit,minmax(75px,1fr))] gap-4">
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(100px,1fr))] max-lg:grid-cols-[repeat(auto-fit,minmax(60px,1fr))] gap-4">
           {(cert.sub_certs.map((img, idx) => {
             return (
               <FramerBoxSlideIn idx={idx} key={`${cert.Specialization.title} ${idx}`} className="flex-1">

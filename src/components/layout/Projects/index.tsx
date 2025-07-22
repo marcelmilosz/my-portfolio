@@ -79,20 +79,6 @@ const ProjectList = {
       time_spent: "2 weeks"
     }
   },
-  Pacman: {
-    img: pacmanImg,
-    title: "Pac-Man (Vanilla JS Edition)",
-    description:
-      "Built as a break from frameworks, this pure JavaScript rendition of Pac-Man was my way of saying 'I still remember how the DOM works'. No React, no build tools — just ghosts, dots, and good old-fashioned fun.",
-    skills: ["HTML", "CSS", "JavaScript"],
-    app_url: "https://pac-man-psi.vercel.app/",
-    app_detail: "Go ahead and play — I'll wait.",
-    nerd_stats: {
-      commits: "10+",
-      type: "Personal - Just for Fun",
-      time_spent: "3 days"
-    }
-  },
 
   Colorpicker: {
     img: colorpickerImg,
@@ -163,7 +149,21 @@ const ProjectList = {
       type: "Freelance - Client work",
       time_spent: "7 days"
     }
-  }
+  },
+  Pacman: {
+    img: pacmanImg,
+    title: "Pac-Man (Vanilla JS Edition)",
+    description:
+      "Built as a break from frameworks, this pure JavaScript rendition of Pac-Man was my way of saying 'I still remember how the DOM works'. No React, no build tools — just ghosts, dots, and good old-fashioned fun.",
+    skills: ["HTML", "CSS", "JavaScript"],
+    app_url: "https://pac-man-psi.vercel.app/",
+    app_detail: "Go ahead and play — I'll wait.",
+    nerd_stats: {
+      commits: "10+",
+      type: "Personal - Just for Fun",
+      time_spent: "3 days"
+    }
+  },
 } as const
 
 type ProjectName = keyof typeof ProjectList
@@ -174,11 +174,11 @@ const projectNames: ProjectName[] = [
   "Messenger",
   "Frnd",
   "Blog",
-  "Pacman",
   "Colorpicker",
   "WeatherApp",
   "Oscar",
-  "YahooCharts"
+  "YahooCharts",
+  "Pacman",
 ]
 
 const stickyTopClasses = [
@@ -259,7 +259,7 @@ function ProjectBox({ name, className = "", stickyTop, index }: ProjectBoxProps)
       <div
         className="
       transition-all duration-300 ease-in-out
-      backdrop-blur-xl w-full min-h-[250px] rounded-3xl p-12 max-md:p-6
+      backdrop-blur-xl w-full min-h-[250px] rounded-3xl p-8 max-md:p-6
       shadow-[var(--color-project-box-shadow)] flex gap-8 items-center
     "
         style={{
@@ -272,8 +272,8 @@ function ProjectBox({ name, className = "", stickyTop, index }: ProjectBoxProps)
             src={image}
             alt={name}
             width={350}
-            height={300}
-            className="w-full h-full object-cover rounded-2xl"
+            height={250} // Dopasuj do wysokości kontenera!
+            className="w-[350px] h-[250px] object-cover rounded-2xl"
           />
         </div>
 
@@ -292,7 +292,7 @@ function ProjectBox({ name, className = "", stickyTop, index }: ProjectBoxProps)
 
             <div className="opacity-50 hover:opacity-100 relative group">
               <MyIcon iconName="info" iconSize="lg" iconStroke="1.5" />
-              <div className="w-[200px] hidden group-hover:flex min-h-max p-3 bg-[var(--color-black-auto)] absolute top-[-10px] right-[30px] rounded-md rounded-tr-none flex-col gap-2 shadow-md">
+              <div className="w-[200px] hidden group-hover:flex min-h-max p-3 bg-[var(--color-black-auto)] absolute top-[-10px] right-[30px] rounded-md rounded-tr-none flex-col gap-2">
                 <Text variant="auto" size="xs"><b>Type:</b> {nerd_stats.type}</Text>
                 <Text variant="auto" size="xs"><b>Commits:</b> {nerd_stats.commits}</Text>
                 <Text variant="auto" size="xs"><b>Time spent:</b> {nerd_stats.time_spent}</Text>

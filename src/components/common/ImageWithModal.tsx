@@ -14,6 +14,7 @@ type Props = {
   className?: string
   quality?: number
   unoptimized?: boolean
+  fill?: boolean
 }
 
 export function ImageWithModal({
@@ -23,7 +24,8 @@ export function ImageWithModal({
   height = 128,
   className = "",
   quality,
-  unoptimized = false
+  unoptimized = false,
+  fill = false,
 }: Props) {
   const [open, setOpen] = useState(false)
 
@@ -68,11 +70,10 @@ export function ImageWithModal({
             <Image
               src={src}
               alt={alt}
-              width={900}
-              height={600}
               quality={quality}
               unoptimized={unoptimized}
-              className="max-w-[90vw] max-h-[90vh] rounded-lg shadow-xl"
+              fill={fill}
+              className="max-w-[80vw] max-h-[80vh] rounded-lg shadow-xl"
             />
           </motion.div>
         </div>
