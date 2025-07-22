@@ -159,8 +159,8 @@ const iconVariants = {
   },
 
   auto: {
-    base: "text-black dark:text-white",
-    fill: "fill-black dark:fill-white",
+    base: "text-[var(--color-white-auto)]",
+    fill: "fill-[var(--color-white-auto)]",
   },
 }
 

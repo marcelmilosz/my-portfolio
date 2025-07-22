@@ -292,7 +292,7 @@ function ProjectBox({ name, className = "", stickyTop, index }: ProjectBoxProps)
 
             <div className="opacity-50 hover:opacity-100 relative group">
               <MyIcon iconName="info" iconSize="lg" iconStroke="1.5" />
-              <div className="w-[200px] hidden group-hover:flex min-h-max p-3 bg-[var(--color-black)] absolute top-[-10px] right-[30px] rounded-md rounded-tr-none flex-col gap-2">
+              <div className="w-[200px] hidden group-hover:flex min-h-max p-3 bg-[var(--color-black-auto)] absolute top-[-10px] right-[30px] rounded-md rounded-tr-none flex-col gap-2 shadow-md">
                 <Text variant="auto" size="xs"><b>Type:</b> {nerd_stats.type}</Text>
                 <Text variant="auto" size="xs"><b>Commits:</b> {nerd_stats.commits}</Text>
                 <Text variant="auto" size="xs"><b>Time spent:</b> {nerd_stats.time_spent}</Text>

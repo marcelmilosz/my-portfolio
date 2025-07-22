@@ -2,17 +2,19 @@
 
 /* Default (dark) */
 :root {
+    /* Variables  */
     --navbar-height: 120px;
     --navbar-height-mobile: 80px;
     --landing-height: calc(100vh - 120px);
 
-    /* Gradients  */
+    /* Gradients */
     --gradient-hero: radial-gradient(circle at 40% 30%, rgba(63, 8, 151, 0.9), transparent 60%);
     --gradient-hero2: radial-gradient(circle at 10% 30%, rgba(34, 8, 151, 0.9), transparent 60%);
     --gradient-hero3: radial-gradient(circle at 10% 30%, rgba(172, 20, 103, 0.8), transparent 60%);
 
-    --color-black: #000;
-    --color-white: #fff;
+    /* Text colors  */
+    --color-white-auto: #fff;
+    --color-black-auto: #000;
 
     /* Those colors wont change in different themes */
     --color-static-white: #fff;
@@ -23,26 +25,21 @@
     --color-primary: #8f50fc;
     --color-secondary: #db2777;
 
-    --color-primary-secondary-gradient: linear-gradient(45deg, rgba(143, 80, 252, 1) 0%, rgba(219, 39, 119, 1) 100%);
-
     /* Glass box  */
     --color-glass-box: rgba(255, 255, 255, 0.05);
     --color-glass-box-hover: rgba(255, 255, 255, 0.1);
 
     --color-glass-border: rgba(255, 255, 255, 0.2);
-    --color-glass-shadow: 0 4px 16px rgba(0, 0, 0, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.3),
+    --color-glass-shadow: 0 4px 10px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.3),
         inset 1px 0 0 rgba(255, 255, 255, 0.1), inset 0 -1px 0 rgba(255, 255, 255, 0.05),
         inset -1px 0 0 rgba(255, 255, 255, 0.05), inset 0 0 8px 2px rgba(255, 255, 255, 0.05);
 
-    /* Navbar mobile box  */
-    --color-navbar-mobile-glass-box: rgba(255, 255, 255, 0.05);
-
     /* Used in skill tags  */
-    --color-tag-shadow: 0px 2px 6px rgba(0, 0, 0, 0.55);
+    --color-tag-shadow: 0px 2px 12px rgba(0, 0, 0, 0.55);
 
     /* Project box  */
     --color-project-box: rgb(15, 15, 15, 1);
-    --color-project-box-gradient: linear-gradient(-30deg, rgba(4, 4, 4, 0.6) 0%, rgba(24, 24, 24, 0.4) 100%);
+    --color-project-box-gradient: linear-gradient(-30deg, rgba(4, 4, 4, 0.8) 0%, rgba(24, 24, 24, 0.7) 100%);
     --color-project-box-shadow: 0px -2px 6px rgba(0, 0, 0, 0.7);
 }
 
@@ -52,17 +49,17 @@
 /* default is Dark  */
 [data-theme="light"] {
     --background: #f9fafb;
-    --color-white: #000;
-    --color-black: #fff;
+    --color-white-auto: #000;
+    --color-black-auto: #fff;
 
     --color-glass-box: rgba(87, 87, 87, 0.03);
     --color-glass-box-hover: rgba(0, 0, 0, 0.04);
-    --color-glass-border: rgba(165, 165, 165, 0.2);
+    --color-glass-border: rgba(119, 119, 119, 0.2);
 
     --color-tag-shadow: 0px 2px 6px rgb(0, 0, 0, 0.25);
 
     --color-project-box: rgb(255, 255, 255);
-    --color-project-box-gradient: linear-gradient(-30deg, rgba(255, 255, 255, 0.6) 0%, rgba(253, 253, 253, 0.6) 100%);
+    --color-project-box-gradient: linear-gradient(-30deg, rgba(228, 228, 228, 0.2) 0%, rgba(255, 255, 255, 0.8) 100%);
     --color-project-box-shadow: 0px -2px 6px rgba(0, 0, 0, 0.1);
 
     /* --language-ball-bg: radial-gradient(circle at 20% 10%, rgba(199, 199, 199, 0.5), rgba(248, 248, 248, 0.7));

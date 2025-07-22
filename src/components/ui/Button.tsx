@@ -28,8 +28,8 @@ type ButtonVariantStyle = {
 
 export const ButtonVariants: Record<ButtonVariant, ButtonVariantStyle> = {
   primary: {
-    base: "bg-black text-white",
-    hover: "hover:bg-zinc-800"
+    base: "bg-[var(--color-glass-box)] text-white",
+    hover: "hover:bg-[var(--color-glass-box-hover)]"
   },
 
   glass: {

@@ -131,12 +131,6 @@ function SkillBox({ iconName, iconVariant = "auto", iconFill = true, skillName =
       <div className="hidden group-hover:flex absolute bottom-[10px] left-0 mx-auto w-full items-center justify-center px-4   transition-all duration-200">
         <Text size="xs" weight="semibold" variant="muted" className="group-hover:text-white transition-colors">{skillName}</Text>
       </div>
-
-      {/* <div className="bg-[var(--color-glass-box)] p-3 w-full h-full shadow-[var(--color-tag-shadow)] ">
-        {skillName &&
-          <Text size="xs" weight="semibold" variant="muted" className="group-hover:text-white transition-colors">{skillName}</Text>
-        }
-      </div> */}
     </div>
   )
 }

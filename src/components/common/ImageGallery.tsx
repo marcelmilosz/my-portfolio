@@ -4,7 +4,7 @@ import MyIcon from "@/app/icons";
 import { Button } from "../ui/Button";
 import { ImageWithModal } from "./ImageWithModal";
 import SectionTitle from "./SectionTitle";
-import { FramerBoxSlideIn } from "./FramerWrappers";
+import { FramerTopBottomOpacity } from "./FramerWrappers";
 
 type HorizontalCertGalleryProps = {
   images: StaticImageData[];
@@ -21,7 +21,7 @@ export function HorizontalCertGallery({ images, title, subtitle }: HorizontalCer
   };
 
   return (
-    <div className="relative w-full">
+    <FramerTopBottomOpacity className="relative w-full">
       {/* Scrollable gallery */}
 
       <div className={`flex items-center gap-4 ${title ? "justify-between" : "justify-end"}`}>
@@ -43,8 +43,7 @@ export function HorizontalCertGallery({ images, title, subtitle }: HorizontalCer
       <div ref={scrollRef} className="w-full overflow-x-auto no-scrollbar">
         <div className="flex gap-4 py-4 w-max">
           {images.map((img, idx) => (
-            <FramerBoxSlideIn
-              idx={idx}
+            <div
               key={idx}
               className="min-w-[150px] max-w-[150px] flex-shrink-0 rounded-lg shadow-md overflow-hidden"
             >
@@ -55,10 +54,10 @@ export function HorizontalCertGallery({ images, title, subtitle }: HorizontalCer
                 height={100}
                 className="object-cover w-full h-auto cursor-zoom-in hover:scale-[1.03] transition-transform duration-200 rounded-lg"
               />
-            </FramerBoxSlideIn>
+            </div>
           ))}
         </div>
       </div>
-    </div>
+    </FramerTopBottomOpacity>
   );
 }

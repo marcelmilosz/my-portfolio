@@ -33,7 +33,7 @@ const weightMap: Record<TextWeight, string> = {
 };
 
 const variantMap: Record<TextVariant, string> = {
-  auto: "text-[var(--color-white)]",
+  auto: "text-[var(--color-white-auto)]",
   white: "text-[var(--color-static-white)]",
   muted: "text-[var(--color-text-muted)]",
   primary: "text-[var(--color-primary)]",
