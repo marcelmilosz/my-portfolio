@@ -128,8 +128,8 @@ function SkillBox({ iconName, iconVariant = "auto", iconFill = true, skillName =
         <MyIcon iconName={iconName} iconFill={iconFill} iconSize="skillset" iconVariant={iconVariant} />
       </div>
 
-      <div className="hidden group-hover:flex absolute bottom-[10px] left-0 mx-auto w-full items-center justify-center px-4   transition-all duration-200">
-        <Text size="xs" weight="semibold" variant="muted" className="group-hover:text-white transition-colors">{skillName}</Text>
+      <div className="hidden group-hover:flex absolute bottom-[10px] left-0 mx-auto w-full items-center justify-center px-4 transition-all duration-200">
+        <Text size="xs" weight="semibold" variant="auto" className="transition-colors">{skillName}</Text>
       </div>
     </div>
   )

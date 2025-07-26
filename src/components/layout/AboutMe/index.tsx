@@ -22,7 +22,7 @@ function AboutMe() {
   return (
     <LayoutWrapper className="w-full min-h-max relative" size="laptop" id="about-me">
 
-      <Gradient gradientName="hero3" position="top-[400px] right-0" width="w-[700px]" className="rotate-90" />
+      {/* <Gradient gradientName="hero3" position="top-[400px] right-0" width="w-[700px]" className="rotate-90" /> */}
 
       <div className="w-full h-full">
         <SectionTitle title="About Me" subtitle="A Quick Dive Into My Journey" iconName="user" />

@@ -12,6 +12,7 @@ import folderIcon from "../../public/assets/icons/folder.svg"
 import infoIcon from "../../public/assets/icons/info.svg"
 import awardIcon from "../../public/assets/icons/award.svg"
 import arrowLeftIcon from "../../public/assets/icons/arrow-left.svg"
+import briefcaseIcon from "../../public/assets/icons/briefcase.svg"
 
 // Front 
 import pNextjsIcon from "../../public/assets/icons/p_nextjs.svg"
@@ -84,6 +85,7 @@ export type IconNames =
   | "info"
   | "award"
   | "arrow_left"
+  | "briefcase"
 
   // Frontend 
   | "p_nextjs"
@@ -190,6 +192,7 @@ const ICONS_MAP: Record<IconNames, React.FC<SVGProps<SVGSVGElement>>> = {
   info: infoIcon,
   award: awardIcon,
   arrow_left: arrowLeftIcon,
+  briefcase: briefcaseIcon,
 
   // Front 
   p_nextjs: pNextjsIcon,
