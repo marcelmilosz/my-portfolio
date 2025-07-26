@@ -45,6 +45,7 @@ import { ImageWithModal } from "@/components/common/ImageWithModal";
 import { StaticImageData } from "next/image";
 import { FramerBoxSlideIn, FramerTopBottomOpacity } from "@/components/common/FramerWrappers";
 import { HorizontalCertGallery } from "@/components/common/ImageGallery";
+import { SECTION_IDS } from "@/components/common/FloatingNavbar";
 
 type CertificateType = {
   Specialization: {
@@ -95,7 +96,7 @@ const other_certs = [o_webdev, o_nextjs, o_react, o_ts, o_python, o_dsa, o_git, 
 
 function Diplomas() {
   return (
-    <LayoutWrapper className="w-full min-h-screen" size="laptop" id="about-me">
+    <LayoutWrapper className="w-full min-h-screen" size="laptop" id={SECTION_IDS.diplomas}>
 
       <div className="w-full h-full">
         <SectionTitle title="Certificates" subtitle="Well... had to put them somewhere." iconName="award" />

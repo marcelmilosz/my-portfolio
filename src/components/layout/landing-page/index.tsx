@@ -10,12 +10,13 @@ import Link from "next/link";
 import { ScrollTo } from "@/components/common/ScrollTo";
 import { Gradient } from "@/components/ui/Gradient";
 import { motion } from "framer-motion";
+import { SECTION_IDS } from "@/components/common/FloatingNavbar";
 
 // type Props = {};
 
 function LandingPage() {
   return (
-    <main className="w-full h-screen relative overflow-hidden">
+    <main className="w-full h-screen relative overflow-hidden" id={SECTION_IDS.landing}>
 
       <motion.div
         initial={{ opacity: 0, y: -10 }}

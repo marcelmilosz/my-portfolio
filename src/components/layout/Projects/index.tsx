@@ -18,6 +18,7 @@ import MyIcon from "@/app/icons";
 import Link from "next/link";
 import { useStickyState } from "@/hooks/useStickyObserver";
 import { FramerTopBottomOpacity } from "@/components/common/FramerWrappers";
+import { SECTION_IDS } from "@/components/common/FloatingNavbar";
 
 // 🔠 Typ i obiekt obrazów
 const ProjectList = {
@@ -196,7 +197,7 @@ const stickyTopClasses = [
 
 function Projects() {
   return (
-    <LayoutWrapper className="w-full min-h-max relative" size="laptop" id="about-me">
+    <LayoutWrapper className="w-full min-h-max relative" size="laptop" id={SECTION_IDS.projects}>
 
       <div className="w-full h-full">
         <SectionTitle title="Projects That Shaped Me" subtitle="Both Commercial and Personal" iconName="folder" />
@@ -224,7 +225,7 @@ function Projects() {
         <SectionSummaryText>
           These are just a few of the many projects I&apos;ve built — both commercial and personal. Some were developed for real clients, others were born out of curiosity or completed as part of deep-dive courses on platforms like Udemy or Coursera. Many more sit quietly in my GitHub, waiting for their moment to shine.
         </SectionSummaryText>
-        <span className="text-sm text-[var(--color-text-muted)] font-light italic">You can find more projects on my github: <Link target="_blank" href="https://github.com/marcelmilosz?tab=repositories" className="text-[var(--color-white)]">https://github.com/marcelmilosz?tab=repositories </Link></span>
+        <SectionSummaryText >You can find more projects on my github: <Link target="_blank" href="https://github.com/marcelmilosz?tab=repositories" className="text-[var(--color-white)]">https://github.com/marcelmilosz?tab=repositories </Link></SectionSummaryText>
       </FramerTopBottomOpacity>
 
     </LayoutWrapper>
@@ -283,9 +284,9 @@ function ProjectBox({ name, className = "", stickyTop, index }: ProjectBoxProps)
               {skills.map((skill, idx) => (
                 <div
                   key={idx}
-                  className="bg-[var(--color-glass-box)] px-2 py-1 rounded-full border border-[var(--color-white)]"
+                  className="px-2 py-1 rounded-full border border-[var(--color-white-auto)]"
                 >
-                  <Text size="xs">{skill}</Text>
+                  <Text size="xs" weight="medium" variant="auto">{skill}</Text>
                 </div>
               ))}
             </div>

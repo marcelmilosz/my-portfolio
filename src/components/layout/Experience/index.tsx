@@ -1,3 +1,4 @@
+import { SECTION_IDS } from "@/components/common/FloatingNavbar";
 import { FramerTopBottomOpacity } from "@/components/common/FramerWrappers";
 import SectionTitle from "@/components/common/SectionTitle";
 import { Text } from "@/components/ui/Text";
@@ -58,12 +59,29 @@ const CurrentExperience: ExperienceData = {
 
 function Experience() {
   return (
-    <LayoutWrapper className="w-full min-h-screen" size="laptop" id="about-me">
+    <LayoutWrapper className="w-full min-h-screen" size="laptop" id={SECTION_IDS.experience}>
 
       <div className="w-full h-full">
         <SectionTitle title="Experience" subtitle="Career.exe Successfully Running" iconName="briefcase" />
 
-        <ExperienceList />
+        <div className="py-12 flex gap-8 max-md:gap-2 relative">
+
+          {/* Ścieżka z kropek + kulka */}
+          <div className="relative w-8 flex flex-col items-center ml-4 ">
+
+            {/* Kulka jako sticky */}
+            <FramerTopBottomOpacity className="w-6 h-6 bg-[var(--color-glass-box-hover)] rounded-full sticky top-[4rem] z-10 flex items-center justify-center animate-breathing">
+              <div className="w-4 h-4 bg-[var(--color-secondary)] rounded-full shadow-[var(--color-tag-shadow)] animate-breathing"></div>
+            </FramerTopBottomOpacity>
+
+
+            {/* Kropkowana linia */}
+            <div className="h-full w-[2px] border-l-2 border-dashed border-spacing-y-32 border-[var(--color-secondary)] z-0 opacity-25"></div>
+          </div>
+
+          {/* Twoja lista doświadczeń */}
+          <ExperienceList />
+        </div>
 
       </div>
 
@@ -73,17 +91,17 @@ function Experience() {
 
 export function ExperienceList() {
   return (
-    <div className="py-12 flex flex-col gap-12">
+    <div className="flex flex-col gap-12">
       {Object.entries(CurrentExperience).map(([key, exp]) => (
         <FramerTopBottomOpacity key={key} className="">
 
-          <div className="flex items-center justify-between">
+          <div className="flex md:items-center justify-between max-md:flex-col-reverse gap-4">
             <div className="flex flex-col gap-2">
               <Text size="xl" weight="normal" variant="auto">{exp.company}</Text>
               <Text size="3xl" weight="bold" variant="auto">{exp.position}</Text>
             </div>
 
-            <div className="flex flex-col">
+            <div className="flex flex-col max-md:items-end">
               <Text size="sm" weight="light" variant="auto">{exp.work_time}</Text>
               <Text size="sm" weight="light" variant="auto">{exp.where}</Text>
             </div>

@@ -59,7 +59,7 @@ export function Text({
 
 export function SectionSummaryText({ children }: { children: React.ReactNode }) {
   return (
-    <span className="text-sm text-[var(--color-text-muted)] font-light italic">
+    <span className="text-sm text-[var(--color-text-muted)] font-light">
       {children}
     </span>
   )

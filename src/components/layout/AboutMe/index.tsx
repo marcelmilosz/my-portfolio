@@ -1,7 +1,7 @@
 
 import { FramerBoxSlideIn, FramerTopBottomOpacity } from "@/components/common/FramerWrappers";
 import SectionTitle from "@/components/common/SectionTitle";
-import { Gradient } from "@/components/ui/Gradient";
+// import { Gradient } from "@/components/ui/Gradient";
 import { SectionSummaryText, Text } from "@/components/ui/Text";
 import { LayoutWrapper } from "@/components/wrappers";
 import React from "react";

@@ -6,6 +6,7 @@ type ScrollToProps = {
   offset?: number
   className?: string
   children: React.ReactNode
+  onClick?: () => void
 }
 
 export function ScrollTo({
@@ -13,13 +14,14 @@ export function ScrollTo({
   offset = 0,
   className = "",
   children,
+  onClick,
 }: ScrollToProps) {
   const scrollToAnchor = useScrollStore((s) => s.scrollToAnchor)
 
 
-
   function handleScrollTo() {
-    console.log(id)
+    if (onClick) onClick()
+
     scrollToAnchor(id, offset)
   }
 

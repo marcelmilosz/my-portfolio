@@ -7,17 +7,22 @@ import { GlassBox, LayoutWrapper } from "@/components/wrappers";
 import { useThemeStore } from "@/store/useThemeStore";
 import React from "react";
 import NavbarMenuView from "./NavbarMenuView";
-import Link from "next/link";
+import { SECTION_IDS, SECTION_LABELS } from "@/components/common/FloatingNavbar";
+import { ScrollTo } from "@/components/common/ScrollTo";
 
 // type Props = {};
 
-export const NAVBAR_ITEMS = [
-  { key: "home", text: "Home", href: "/" },
-  { key: "about", text: "About Me", href: "/about" },
-  { key: "projects", text: "Projects", href: "/projects" },
-] as const;
+export type NavbarItem = {
+  key: keyof typeof SECTION_IDS
+  text: string
+}
 
-export type NavbarItem = (typeof NAVBAR_ITEMS)[number];
+export const NAVBAR_ITEMS: NavbarItem[] = (Object.entries(SECTION_IDS) as [keyof typeof SECTION_IDS, string][]).map(
+  ([key]) => ({
+    key,
+    text: SECTION_LABELS[key],
+  })
+)
 
 
 function Navbar() {
@@ -26,7 +31,7 @@ function Navbar() {
 
   return (
     <LayoutWrapper
-      className={`h-[var(--navbar-height)] max-md:h-[var(--navbar-height-mobile)] ${BORDER_RADIUSES[DEFAULT_BORDER_RADIUS]}`}
+      className={`h-[var(--navbar-height)] max-lg:h-[var(--navbar-height-mobile)] ${BORDER_RADIUSES[DEFAULT_BORDER_RADIUS]}`}
     >
 
       <nav className="h-full w-full flex gap-4 justify-between items-center">
@@ -40,17 +45,23 @@ function Navbar() {
         </div>
 
         {/* Menu  */}
-        <GlassBox className="flex justify-between gap-1 overflow-hidden transition-all duration-200 w-max max-md:hidden" rounded="full" p="none">
-          {NAVBAR_ITEMS.map((item) => (
-            <NavbarLink key={item.key} href={item.href}>
-              {item.text}
-            </NavbarLink>
-          ))}
+        <GlassBox className="flex justify-between gap-1 overflow-hidden transition-all duration-200 w-max max-lg:hidden" rounded="full" p="none">
+          {NAVBAR_ITEMS.map((item) => {
+            if (item.key === "landing") return null
+            if (item.key === "hobbies") return null
+
+            return (
+              <NavbarLink key={item.key} id={item.key}>
+                {item.text}
+              </NavbarLink>
+            )
+          }
+          )}
         </GlassBox>
 
         {/* Actions  */}
         <div className="flex gap-4 w-full max-w-[200px] items-center justify-end">
-          <Button onClick={() => toggleTheme()} shape="circle" rounded="full" variant="glass" p="sm" className="min-h-[40px] min-w-[40px] max-md:hidden">
+          <Button onClick={() => toggleTheme()} shape="circle" rounded="full" variant="glass" p="sm" className="min-h-[40px] min-w-[40px] max-lg:hidden">
             <MyIcon iconName={theme === "dark" ? "moon" : "sun"} iconSize="md" iconStroke="1.5" />
           </Button>
           <Button rounded="full" variant="glass" p="md" className="max-[350px]:hidden">Contact me</Button>
@@ -64,14 +75,14 @@ function Navbar() {
 
 type NavbarLinkProps = {
   children: React.ReactNode
-  href: string
+  id: string
 }
 
-function NavbarLink({ children, href = "" }: NavbarLinkProps) {
+function NavbarLink({ children, id = "" }: NavbarLinkProps) {
   return (
-    <Link href={href}>
+    <ScrollTo id={id}>
       <Text weight="normal" className="whitespace-nowrap select-none p-2 px-5 rounded-lg hover:bg-[var(--color-glass-box-hover)] cursor-pointer duration-100 transition-all">{children}</Text>
-    </Link>
+    </ScrollTo>
   )
 }
 
