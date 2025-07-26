@@ -119,7 +119,7 @@ type SkillBoxProps = {
 
 function SkillBox({ iconName, iconVariant = "auto", iconFill = true, skillName = "", tag = "" }: SkillBoxProps) {
   return (
-    <div className={`bg-[var(--color-glass-box)] px-8 p-7 max-md:px-4 max-sm:px-2  relative overflow-hidden ${BORDER_RADIUSES[DEFAULT_BORDER_RADIUS]} flex flex-col gap-2 items-center group`}>
+    <div className={`bg-[var(--color-skill-box)] px-8 p-7 max-md:px-4 max-sm:px-2  relative overflow-hidden ${BORDER_RADIUSES[DEFAULT_BORDER_RADIUS]} flex flex-col gap-2 items-center group`}>
 
       {tag &&
         <SkillTag tag={tag} />

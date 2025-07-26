@@ -25,6 +25,9 @@
     --color-primary: #8f50fc;
     --color-secondary: #db2777;
 
+    /* Skils  */
+    --color-skill-box: rgba(255, 255, 255, 0.05);
+
     /* Glass box  */
     --color-glass-box: rgba(255, 255, 255, 0.05);
     --color-glass-box-hover: rgba(255, 255, 255, 0.1);
@@ -39,8 +42,8 @@
 
     /* Project box  */
     --color-project-box: rgb(15, 15, 15, 1);
-    --color-project-box-gradient: linear-gradient(-30deg, rgba(4, 4, 4, 0.8) 0%, rgba(24, 24, 24, 0.7) 100%);
-    --color-project-box-shadow: 0px -2px 6px rgba(0, 0, 0, 0.7);
+    --color-project-box-gradient: linear-gradient(-30deg, rgba(34, 34, 34, 0.25) 0%, rgba(27, 27, 27, 0.7) 100%);
+    --color-project-box-shadow: 0px 1px 5px rgb(0, 0, 0);
 }
 
 /* @theme {
@@ -48,26 +51,28 @@
 
 /* default is Dark  */
 [data-theme="light"] {
-    --background: #f9fafb;
+    --background: #fff;
     --color-white-auto: #000;
     --color-black-auto: #fff;
 
-    --color-glass-box: rgba(87, 87, 87, 0.03);
-    --color-glass-box-hover: rgba(0, 0, 0, 0.04);
+    --color-skill-box: rgba(0, 0, 0, 0.03);
+
+    --color-glass-box: rgba(247, 247, 247, 0.5);
+    --color-glass-box-hover: rgba(255, 255, 255, 0.75);
     --color-glass-border: rgba(119, 119, 119, 0.2);
 
     --color-tag-shadow: 0px 2px 6px rgb(0, 0, 0, 0.25);
 
     --color-project-box: rgb(255, 255, 255);
-    --color-project-box-gradient: linear-gradient(-30deg, rgba(228, 228, 228, 0.2) 0%, rgba(255, 255, 255, 0.8) 100%);
-    --color-project-box-shadow: 0px -2px 6px rgba(0, 0, 0, 0.1);
+    --color-project-box-gradient: linear-gradient(-30deg, rgba(235, 235, 235, 0.25) 0%, rgba(255, 255, 255, 0.8) 100%);
+    --color-project-box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.25);
 
     /* --language-ball-bg: radial-gradient(circle at 20% 10%, rgba(199, 199, 199, 0.5), rgba(248, 248, 248, 0.7));
     --language-ball-shadow: -4px -4px 32px rgba(139, 139, 139, 0.1), inset 0px 0px 2px rgba(156, 155, 155, 0.8); */
 }
 
 [data-theme="dark"] {
-    --background: #000;
+    --background: #060606;
 }
 
 html {
