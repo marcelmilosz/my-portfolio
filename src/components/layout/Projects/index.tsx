@@ -215,7 +215,7 @@ function Projects() {
           These are just a few of the many projects I&apos;ve built — both commercial and personal. Some were developed for real clients, others were born out of curiosity or completed as part of deep-dive courses on platforms like Udemy or Coursera. Many more sit quietly in my GitHub, waiting for their moment to shine.
         </SectionSummaryText>
         <br /><br />
-        <SectionSummaryText >You can find more projects on my github: <Link target="_blank" href="https://github.com/marcelmilosz?tab=repositories" className="text-[var(--color-black-auto)]">https://github.com/marcelmilosz?tab=repositories </Link></SectionSummaryText>
+        <SectionSummaryText >You can find more projects on my github: <Link target="_blank" href="https://github.com/marcelmilosz?tab=repositories" className="text-[var(--color-white-auto)]">https://github.com/marcelmilosz?tab=repositories </Link></SectionSummaryText>
       </FramerTopBottomOpacity>
 
     </LayoutWrapper>
