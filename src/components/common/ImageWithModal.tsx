@@ -69,7 +69,7 @@ export function ImageWithModal({
               shapeSize="w-14 h-14"
               onClick={() => setOpen(false)}
             >
-              <MyIcon iconName="x" iconSize="lg" />
+              <MyIcon iconName="x" iconSize="lg" iconVariant="white" />
             </Button>
           </div>
 

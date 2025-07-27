@@ -31,7 +31,7 @@ function Hobbies() {
       </div>
 
       {/* <BooksCarousel /> */}
-      <div className="py-12 flex flex-col gap-24 ">
+      <div className="py-12 max-lg:py-4 flex flex-col gap-24 ">
 
 
         {/* 1. Hobby icons */}
