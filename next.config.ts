@@ -1,13 +1,17 @@
-module.exports = {
+import type { Configuration } from "webpack";
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
     images: {
-        domains: [""], // Add external domains here
+        domains: [], // jeśli używasz zewnętrznych obrazów
     },
-    webpack(config) {
-        config.module.rules.push({
+    webpack(config: Configuration) {
+        config.module?.rules?.push({
             test: /\.svg$/,
             use: ["@svgr/webpack"],
         });
-
         return config;
     },
 };
+
+export default nextConfig;
