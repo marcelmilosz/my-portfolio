@@ -43,9 +43,11 @@ type ContactBoxProps = {
 
 function ContactBox({ contactName = "", contactData = "", iconName, href, target = "_blank" }: ContactBoxProps) {
   return (
-    <div className={`flex-1 min-w-max p-4 px-6 relative overflow-hidden ${BORDER_RADIUSES[DEFAULT_BORDER_RADIUS]} flex gap-4 items-center border border-[var(--color-white-auto)]`}>
+    <div className={`flex-1 min-w-max max-sm:min-w-full p-4 px-6 relative overflow-hidden ${BORDER_RADIUSES[DEFAULT_BORDER_RADIUS]} flex gap-4 items-center border border-[var(--color-white-auto)]`}>
 
-      <MyIcon iconName={iconName} iconSize="xl" iconVariant={"auto"} iconStroke="1.5" />
+      <div className="min-w-max">
+        <MyIcon iconName={iconName} iconSize="xl" iconVariant={"auto"} iconStroke="1.5" />
+      </div>
 
       <div>
         <Text size="sm" weight="normal" variant="auto">{contactName}</Text>

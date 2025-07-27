@@ -80,14 +80,14 @@ export function ImageWithModal({
             transition={{ duration: 0.2 }}
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="relative w-[90vw] max-w-4xl h-[80vh]">
+            <div className="relative max-w-[90vw] max-w-4xl h-[80vh]">
               <Image
                 src={src}
                 alt={alt}
                 quality={quality}
                 unoptimized={unoptimized}
                 fill={fill}
-                className="object-contain w-full h-full rounded-lg shadow-xl"
+                className="object-contain w-full h-full rounded-lg"
               />
             </div>
           </motion.div>
