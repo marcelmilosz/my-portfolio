@@ -9,13 +9,13 @@ import React from "react";
 
 function Contact() {
   return (
-    <LayoutWrapper className="w-full min-h-max py-24" size="laptop" id={"contact"}>
+    <LayoutWrapper className="w-full min-h-max py-24 max-sm:py-16" size="laptop" id={"contact"}>
 
       {/* <div className="w-full h-full">
         <SectionTitle title="Certificates" subtitle="Well... had to put them somewhere." iconName="award" />
       </div> */}
 
-      <Text size="3xl" weight="semibold" className="text-left"> You made it to the bottom - thanks for scrolling this far 🙌</Text>
+      <Text size="3xl" weight="semibold" className="text-left mb-2"> You made it to the bottom - thanks for scrolling this far 🙌</Text>
       <Text size="base" weight="normal"> If something caught your eye or you&apos;d just like to connect, feel free to reach out. </Text>
 
       <div className="py-12 flex flex-col gap-4">

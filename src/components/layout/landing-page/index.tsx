@@ -136,7 +136,7 @@ function Console() {
 
   return (
     <div className="w-full max-w-3xl mx-auto 
-      backdrop-blur-lg bg-[var(--color-console-bg)] text-white rounded-lg
+      backdrop-blur-lg bg-[var(--color-console-bg)] rounded-lg
       shadow-[var(--color-console-shadow)] border border-[var(--color-console-border)]
       overflow-hidden"
     >
@@ -154,7 +154,7 @@ function Console() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.3 }}
-          className="inline whitespace-pre-wrap"
+          className="inline whitespace-pre-wrap text-[var(--color-white-auto)]"
         >
           {typedCommand}
           {step === "typing" && <span className="animate-pulse">|</span>}
@@ -167,7 +167,7 @@ function Console() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5 }}
-              className="text-gray-400"
+              className="text-[var(--color-text-muted)]"
             >
               Starting dev server...
             </motion.p>
@@ -182,12 +182,15 @@ function Console() {
             className="mt-2"
           >
             <Button
+              variant="glass"
+
               onClick={() =>
                 document
                   .getElementById("about-me")
                   ?.scrollIntoView({ behavior: "smooth" })
               }
-              className="text-sm"
+              className="text-sm shadow-none"
+              rounded="md"
             >
               🚀 Start Here
             </Button>
