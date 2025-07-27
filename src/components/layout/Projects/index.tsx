@@ -244,15 +244,20 @@ function ProjectBox({ name, className = "", stickyTop, index }: ProjectBoxProps)
 
   const scaleFactor = isSticky ? 1 - (projectNames.length - index) * 0.02 : 1
 
-  const scaleClass = isSticky ? `scale-[${1 - (projectNames.length - index) * 0.02}]` : "scale-100"
+  // const scaleClass = isSticky ? `scale-[${1 - (projectNames.length - index) * 0.02}]` : "scale-100"
 
   return (
-    <div ref={ref} className={`sticky ${className}`} style={{ top: `${1 + index}rem` }}>
+    <div
+      ref={ref}
+      className={`sticky ${className}`}
+      style={{ top: `${1 + index}rem` }}
+    >
       <div
-        className={`${scaleClass} transition-all duration-300 ease-in-out backdrop-blur-xl w-full min-h-[250px] rounded-3xl p-8 max-md:p-6 shadow-[var(--color-project-box-shadow)] flex gap-8 items-center`}
+        className="backdrop-blur-xl w-full min-h-[250px] rounded-3xl p-8 max-md:p-6 shadow-[var(--color-project-box-shadow)] flex gap-8 items-center"
         style={{
           background: "var(--color-project-box-gradient)",
           transform: `scale(${scaleFactor})`,
+          transition: "transform 0.3s ease-in-out",
           willChange: "transform",
         }}
       >

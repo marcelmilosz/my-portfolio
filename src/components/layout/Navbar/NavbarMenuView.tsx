@@ -37,7 +37,7 @@ function NavbarMobile({ closeNavbar }: { closeNavbar: () => void }) {
       initial={{ y: "100%", opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.2, ease: "easeOut" }}
-      className="fixed bottom-0 left-0 pb-4 h-svh overflow-y-auto w-full bg-[var(--color-glass-box)] z-50 backdrop-blur-2xl"
+      className="fixed bottom-0 left-0 pb-4 min-h-svh h-full overflow-y-auto w-full bg-[var(--color-glass-box)] z-50 backdrop-blur-2xl"
     >
       <LayoutWrapper>
 
