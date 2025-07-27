@@ -25,6 +25,12 @@
     --color-primary: #8f50fc;
     --color-secondary: #db2777;
 
+    /* Console  */
+    --color-console-upper: rgb(44, 44, 44, 0.5);
+    --color-console-border: rgb(76, 76, 76, 0.5);
+    --color-console-bg: rgb(30, 30, 30, 0.2);
+    --color-console-shadow: 0 4px 16px rgba(143, 80, 252, 0.1), 0 0 24px rgba(219, 39, 119, 0.2); /* secondary */
+
     /* Floating navbar  */
     --color-fn-active: var(--color-secondary);
     --color-fn-not-active: rgb(189, 189, 189);
@@ -168,7 +174,6 @@ body {
 }
 
 /* === Other styles ===  */
-
 /* book  */
 .book-container {
     display: flex;

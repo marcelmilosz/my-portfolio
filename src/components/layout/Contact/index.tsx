@@ -24,8 +24,8 @@ function Contact() {
         <div className="flex gap-4 flex-wrap">
           <ContactBox contactName="E-Mail" contactData="marcel.milosz99@gmail.com" iconName="email" href="mailto:marcel.milosz99@gmail.com" target={"_self"} />
           <ContactBox contactName="Phone" contactData="+48 793 080 875" iconName="phone" href="tel:+48793080875" target={"_self"} />
-          <ContactBox contactName="LinkedIn" contactData="https://www.linkedin.com/in/marcelmilosz" iconName="linkedin" href="https://www.linkedin.com/in/marcelmilosz/" />
-          <ContactBox contactName="Github" contactData="https://github.com/marcelmilosz" iconName="github" href="https://github.com/marcelmilosz" />
+          <ContactBox contactName="LinkedIn" contactData="linkedin.com/in/marcelmilosz" iconName="linkedin" href="https://www.linkedin.com/in/marcelmilosz/" />
+          <ContactBox contactName="Github" contactData="github.com/marcelmilosz" iconName="github" href="https://github.com/marcelmilosz" />
         </div>
       </div>
     </LayoutWrapper>
