@@ -2,7 +2,7 @@
 import MyIcon from "@/app/icons";
 import { Button } from "@/components/ui/Button";
 import { Text } from "@/components/ui/Text";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { NAVBAR_ITEMS } from "./Navbar";
 import { useThemeStore } from "@/store/useThemeStore";
 import { motion } from "framer-motion";
@@ -32,12 +32,19 @@ function NavbarMobile({ closeNavbar }: { closeNavbar: () => void }) {
   const toggleTheme = useThemeStore((s) => s.toggleTheme)
   const theme = useThemeStore((s) => s.theme)
 
+  useEffect(() => {
+    document.body.style.overflow = "hidden"
+    return () => {
+      document.body.style.overflow = ""
+    }
+  }, [])
+
   return (
     <motion.div
       initial={{ y: "100%", opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.2, ease: "easeOut" }}
-      className="fixed bottom-0 left-0 pb-4 min-h-svh h-full overflow-y-auto w-full bg-[var(--color-glass-box)] z-50 backdrop-blur-2xl"
+      className="absolute inset-0 pb-4 min-h-[100dvh] w-full overflow-y-auto z-50 bg-[var(--color-glass-box)] backdrop-blur-2xl"
     >
       <LayoutWrapper>
 
