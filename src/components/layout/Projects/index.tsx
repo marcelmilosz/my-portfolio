@@ -182,18 +182,6 @@ const projectNames: ProjectName[] = [
   "Pacman",
 ]
 
-const stickyTopClasses = [
-  "top-[1rem]",
-  "top-[2rem]",
-  "top-[3rem]",
-  "top-[4rem]",
-  "top-[5rem]",
-  "top-[6rem]",
-  "top-[7rem]",
-  "top-[8rem]",
-  "top-[9rem]",
-  "top-[10rem]",
-]
 
 function Projects() {
   return (
@@ -215,7 +203,8 @@ function Projects() {
               name={name}
               stickyTop={stickyTop}
               index={index}
-              className={`sticky ${stickyTopClasses[index]} z-[${index + 1}]`}
+              className={`sticky z-[${index + 1}]`}
+
             />
           )
         })}
@@ -255,17 +244,16 @@ function ProjectBox({ name, className = "", stickyTop, index }: ProjectBoxProps)
 
   const scaleFactor = isSticky ? 1 - (projectNames.length - index) * 0.02 : 1
 
+  const scaleClass = isSticky ? `scale-[${1 - (projectNames.length - index) * 0.02}]` : "scale-100"
+
   return (
-    <div ref={ref} className={`sticky ${className}`}>
+    <div ref={ref} className={`sticky ${className}`} style={{ top: `${1 + index}rem` }}>
       <div
-        className="
-      transition-all duration-300 ease-in-out
-      backdrop-blur-xl w-full min-h-[250px] rounded-3xl p-8 max-md:p-6
-      shadow-[var(--color-project-box-shadow)] flex gap-8 items-center
-    "
+        className={`${scaleClass} transition-all duration-300 ease-in-out backdrop-blur-xl w-full min-h-[250px] rounded-3xl p-8 max-md:p-6 shadow-[var(--color-project-box-shadow)] flex gap-8 items-center`}
         style={{
           background: "var(--color-project-box-gradient)",
           transform: `scale(${scaleFactor})`,
+          willChange: "transform",
         }}
       >
         <div className="overflow-hidden min-w-[350px] max-w-[350px] h-[250px] max-md:hidden">
