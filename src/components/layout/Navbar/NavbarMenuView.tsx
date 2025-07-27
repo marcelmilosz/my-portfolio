@@ -65,7 +65,9 @@ function NavbarMobile({ closeNavbar }: { closeNavbar: () => void }) {
               {item.text}
             </NavbarMobileLink>
           ))}
-          <Button rounded="full" variant="glass" p="md">Contact me</Button>
+          <ScrollTo id="contact" onClick={() => closeNavbar()}>
+            <Button rounded="full" variant="glass" p="md">Contact me</Button>
+          </ScrollTo>
         </div>
 
       </LayoutWrapper>

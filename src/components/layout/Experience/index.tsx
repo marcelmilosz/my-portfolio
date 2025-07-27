@@ -12,7 +12,7 @@ type Experience = {
   position: string
   work_time: string
   where: string
-  job_description: string[]
+  job_description: React.ReactNode[]
 }
 
 type ExperienceData = Record<string, Experience>
@@ -24,14 +24,23 @@ const CurrentExperience: ExperienceData = {
     work_time: "12.2020 - Present",
     where: "Poland, Ostrow Wielkopolski",
     job_description: [
-      "Automated repetitive graphic design tasks using Python and PyAutoGUI, reducing manual creation time from 2 hours per asset to under 5 minutes, significantly improving team efficiency and consistency.",
-      "Developed a custom full-stack application using React, Next.js, and PostgreSQL for internal management of billboard assets and customer-facing campaigns. This streamlined data access and improved task coordination across departments.",
-      "Maintained and optimized company website (vixonmedia.pl) by implementing CMS updates and UX improvements, increasing customer engagement and improving SEO metrics.",
-      "Managed product databases in Subiekt GT, including writing complex SQL queries to support marketing insights, logistics coordination, and automated reporting.",
-      "Built Python-based data scraping tools using BeautifulSoup and Selenium, which enabled fast extraction of product information from supplier websites, reducing product upload time by over 70%.",
-      "Oversaw e-commerce operations including Allegro store management, Allegro Ads optimization, product listings, and customer service — resulting in measurable improvements in conversion rates and average order value.",
-      "Created Excel-based automation templates and VBA macros to facilitate product catalog generation, financial reporting, and logistics planning."
+      <>Automated repetitive graphic design tasks using Python and PyAutoGUI, reducing manual creation time from 2 hours to under 5 minutes per asset, significantly improving team efficiency and consistency.</>,
+
+      <>Developed a custom full-stack application using React, Next.js, and PostgreSQL to manage billboard assets and coordinate customer-facing campaigns.</>,
+
+      <>Maintained and optimized the company website (vixonmedia.pl) by implementing CMS updates and UX improvements, which increased customer engagement and improved SEO performance.</>,
+
+      <>Managed a product database of over 15,000 SKUs in Subiekt GT, writing complex SQL queries to support marketing analysis, logistics coordination, and automated reporting.</>,
+
+      <>Built Python-based scraping tools with BeautifulSoup and Selenium to automate product data extraction from supplier websites, reducing upload time by over 70%.</>,
+
+      <>Oversaw e-commerce operations including Allegro store management, Allegro Ads optimization, product listings, and customer service — resulting in a 60% increase in sales and a higher average order value.</>,
+
+      <>Created Excel automation templates and VBA macros to streamline catalog generation, financial reporting, and logistics planning.</>
     ]
+
+
+
   },
   Fotovix: {
     company: "Fotovix",
@@ -39,12 +48,17 @@ const CurrentExperience: ExperienceData = {
     work_time: "10.03.2021 - 01.06.2023",
     where: "Poland, Ostrow Wielkopolski",
     job_description: [
-      "Founded and led a commercial photography business — Fotovix — specializing in product photography, 360° animations, graphic design, and portrait work, delivering high-quality visuals for marketing and e-commerce.",
-      "Built and maintained strong relationships with dozens of clients, including leading local companies such as Litex Promo, 3mk, olejnik, consistently delivering tailored creative solutions on time and within budget.",
-      "Refined hands-on expertise in digital product photography, lighting setups, and post-processing workflows — mastering tools such as Adobe Photoshop, Illustrator, and Canva to deliver high-impact visual content.",
-      "Gained valuable cross-disciplinary experience in UI/UX, creative direction, and brand identity — designing intuitive visual assets that enhanced product appeal across online platforms.",
-      "Developed strong soft skills through regular client interactions — improving communication, project coordination, and the ability to translate client needs into effective visual solutions."
+      <>Founded and led a commercial photography business — Fotovix — specializing in product photography, 360° animations, graphic design, and portrait work, producing high-quality visuals for marketing and e-commerce.</>,
+
+      <>Built and maintained long-term relationships with dozens of clients — including local industry leaders like Litex Promo, 3mk, and Olejnik — consistently delivering tailored creative solutions on time and within budget.</>,
+
+      <>Developed hands-on expertise in digital product photography, studio lighting setups, and post-processing workflows, mastering tools such as Adobe Photoshop, Illustrator, and Canva to create high-impact visual content.</>,
+
+      <>Gained cross-disciplinary experience in UI/UX, creative direction, and brand identity by designing intuitive visual assets that increased product appeal across digital platforms.</>,
+
+      <>Strengthened soft skills through regular client collaboration, improving communication, project coordination, and the ability to translate business needs into effective visual narratives.</>
     ]
+
   },
   Enso: {
     company: "Enso Group",
@@ -52,8 +66,9 @@ const CurrentExperience: ExperienceData = {
     work_time: "09.2017 - 10.2017",
     where: "Great Britain, Clevedon",
     job_description: [
-      "Collaborated in a multicultural team on a full-stack WordPress website for Enso during a UK-based internship. Contributed to both front-end styling and back-end CMS configuration while enhancing cross-cultural communication and remote teamwork skills."
+      <>Contributed to a full-stack WordPress website for Enso as part of a UK-based internship, working in a multicultural team. Took part in front-end styling and back-end CMS configuration while strengthening remote collaboration and cross-cultural communication skills.</>
     ]
+
   }
 }
 

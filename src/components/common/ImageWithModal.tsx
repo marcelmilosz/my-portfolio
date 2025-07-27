@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Image, { StaticImageData } from "next/image"
 import { motion } from "framer-motion"
 import MyIcon from "@/app/icons"
@@ -29,6 +29,19 @@ export function ImageWithModal({
 }: Props) {
   const [open, setOpen] = useState(false)
 
+  useEffect(() => {
+    if (open) {
+      document.body.style.overflow = "hidden"
+    } else {
+      document.body.style.overflow = ""
+    }
+
+    // Opcjonalnie: pełne czyszczenie przy unmount
+    return () => {
+      document.body.style.overflow = ""
+    }
+  }, [open])
+
   return (
     <>
       {/* Obrazek podglądu */}
@@ -46,7 +59,7 @@ export function ImageWithModal({
           onClick={() => setOpen(false)}
           className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center"
         >
-          {/* Ikona zamknięcia */}
+          {/* Zamknięcie */}
           <div className="absolute top-4 right-4 z-50">
             <Button
               variant="glass"
@@ -60,24 +73,27 @@ export function ImageWithModal({
             </Button>
           </div>
 
-          {/* Animowany obraz */}
+          {/* Animowany kontener */}
           <motion.div
             initial={{ opacity: 0, scale: 0.85 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.2 }}
-            onClick={(e) => e.stopPropagation()} // zapobiega zamykaniu na klik w obraz
+            onClick={(e) => e.stopPropagation()}
           >
-            <Image
-              src={src}
-              alt={alt}
-              quality={quality}
-              unoptimized={unoptimized}
-              fill={fill}
-              className="max-w-[80vw] max-h-[80vh] rounded-lg shadow-xl"
-            />
+            <div className="relative w-[90vw] max-w-4xl h-[80vh]">
+              <Image
+                src={src}
+                alt={alt}
+                quality={quality}
+                unoptimized={unoptimized}
+                fill={fill}
+                className="object-contain w-full h-full rounded-lg shadow-xl"
+              />
+            </div>
           </motion.div>
         </div>
       )}
+
     </>
   )
 }

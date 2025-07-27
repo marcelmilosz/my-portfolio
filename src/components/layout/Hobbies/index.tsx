@@ -24,7 +24,7 @@ function Hobbies() {
   return (
     <LayoutWrapper className="w-full min-h-max relative" size="laptop" id={SECTION_IDS.hobbies}>
 
-      <div className="flex gap-8 items-center justify-between max-lg:flex-col max-lg:gap-2">
+      <div className="flex gap-8 items-center justify-between max-lg:flex-col max-lg:gap-2 max-lg:items-start">
         <SectionTitle title="Hobbies" subtitle="Things that keep me sharp & inspired" iconName="activity" className="min-w-max" />
 
         <HeartPulsLine />

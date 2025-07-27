@@ -30,27 +30,34 @@ function AboutMe() {
 
         <FramerTopBottomOpacity className="py-8">
           <Text size="base" className="leading-8">
-            Hey, I&apos;m Marcel — a Full-Stack Developer by day, Data Science grad by degree, and code enthusiast since 2016.
+            Hey, I&apos;m Marcel — a Full-Stack Developer by day, <BT>Data Science grad by degree</BT>, and code enthusiast since 2016.
 
             With nearly <BT>five years of commercial experience</BT>, I&apos;ve built everything from sleek web apps to rock-solid backend systems. I handle both frontend and backend — and occasionally question my sanity while debugging both simultaneously. <BT>I aim for software that doesn&apos;t just work; it works beautifully. </BT>
 
-            Through 3 years of Data Science studies, I built a strong foundation in algorithms, data analysis, and machine learning — and developed a deep appreciation for clean data and even cleaner logic.
+            During my <BT>3-year journey in Data Science</BT>, I built a strong foundation in algorithms, data analysis, and machine learning — and developed a deep appreciation for clean data and even cleaner logic.
             <br /><br />
-            Here&apos;s a secret: when I&apos;m not wrangling APIs or CSS, you&apos;ll often find me in my free time tinkering with x64 Assembly (NASM) or tinkering in C++, just to remind myself how close to the metal I can go — and how far modern languages have drifted into more levels of abstraction.
+            Here&apos;s a secret: when I&apos;m not wrangling APIs or CSS, I&apos;m probably writing x64 Assembly (NASM) or tinkering in C++ — just to remind myself how close to the metal I can get… and how far modern languages have drifted.
             <br /><br />
-            I&apos;m driven by clean code, continuous learning, and making the internet a bit more awesome — one commit at a time.
-            <br /><br />
-            <SectionSummaryText>
-              Additional note <br /> I ran a product photography studio for two years — which means I&apos;ve spent more time in Photoshop than I&apos;d like to admit. From setting up lights to handling clients, it taught me a lot about visual storytelling, working with people, and making pixels look pretty.
-            </SectionSummaryText>
+            I&apos;m driven by clean code, continuous learning, and crafting applications that are stable, scalable, and just a bit smarter every time.
           </Text>
+
+          <div className="flex gap-4 flex-wrap py-8">
+            {HIGHLIGHTS.map((item, idx) => (
+              <StatsBox key={item.label} label={item.label} value={item.value} idx={idx} />
+            ))}
+          </div>
+
+          <SectionSummaryText>
+            Additional note: <br />
+            I ran a product photography studio for two years — which means I&apos;ve spent more time in Photoshop than I&apos;d like to admit. From setting up lights to handling clients, it taught me a lot about visual storytelling, teamwork, and making pixels look pretty.
+          </SectionSummaryText>
         </FramerTopBottomOpacity>
 
-        <div className="flex gap-4 flex-wrap py-8">
-          {HIGHLIGHTS.map((item, idx) => (
-            <StatsBox key={item.label} label={item.label} value={item.value} idx={idx} />
-          ))}
-        </div>
+
+
+
+
+
       </div>
     </LayoutWrapper>
   );
@@ -76,7 +83,7 @@ function StatsBox({
   )
 }
 
-function BT({ children }: { children: React.ReactNode }) {
+export function BT({ children }: { children: React.ReactNode }) {
   return (
     <span className="font-semibold text-[var(--color-secondary)]">{children}</span>
   )

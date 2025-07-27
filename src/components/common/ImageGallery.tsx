@@ -10,9 +10,10 @@ type HorizontalCertGalleryProps = {
   images: StaticImageData[];
   title?: string;
   subtitle?: string;
+  h?: string
 };
 
-export function HorizontalCertGallery({ images, title, subtitle }: HorizontalCertGalleryProps) {
+export function HorizontalCertGallery({ images, title, subtitle, h = "h-[200px]" }: HorizontalCertGalleryProps) {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const scroll = (direction: "left" | "right") => {
@@ -45,12 +46,12 @@ export function HorizontalCertGallery({ images, title, subtitle }: HorizontalCer
           {images.map((img, idx) => (
             <div
               key={idx}
-              className="min-w-[150px] max-w-[150px] flex-shrink-0 rounded-lg shadow-md overflow-hidden"
+              className={`min-w-[150px] max-w-[150px] ${h} flex-shrink-0 rounded-lg shadow-md overflow-hidden`}
             >
               <ImageWithModal
                 src={img}
                 alt={`Certificate ${idx + 1}`}
-                className="object-cover w-full h-auto cursor-zoom-in hover:scale-[1.03] transition-transform duration-200 rounded-lg"
+                className="object-cover w-full h-full cursor-zoom-in hover:scale-[1.03] transition-transform duration-200"
               />
             </div>
           ))}

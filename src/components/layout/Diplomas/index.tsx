@@ -40,6 +40,15 @@ import o_nextjs from "../../../../public/assets/images/Certificate/NextJs_25h.jp
 import o_python from "../../../../public/assets/images/Certificate/Python_Intermediate_11h.jpeg"
 import o_webdev from "../../../../public/assets/images/Certificate/Web_Developer_Bootcamp_2022_64h.jpg"
 
+// Books 
+import bookCleanCode from "../../../../public/assets/images/books/clean-code.jpg"
+import bookAssembly from "../../../../public/assets/images/books/assembly-x64.jpg"
+import bookJs from "../../../../public/assets/images/books/js.jpg"
+import bookNext from "../../../../public/assets/images/books/next.jpg"
+import bookOperating from "../../../../public/assets/images/books/operating.jpg"
+import bookDesign from "../../../../public/assets/images/books/sw-desing.jpg"
+import bookNature from "../../../../public/assets/images/books/nature-code.jpg"
+
 import { SectionSummaryText, Text } from "@/components/ui/Text";
 import { ImageWithModal } from "@/components/common/ImageWithModal";
 import { StaticImageData } from "next/image";
@@ -85,13 +94,14 @@ const LearnCert: CertificateType = {
     image: learn_cert,
     title: "Learning How to Learn",
     end_date: "Jul 23, 2024",
-    time_spent: "I should've watched this in school... could've saved a decade of trial and error. Fantastic course. ~ 2 weeks",
+    time_spent: "Wish someone had taught me years ago how to use my brain properly. This course did it in less than two weeks.",
     platform: "Coursera",
   },
   sub_certs: [],
 }
 
 const other_certs = [o_webdev, o_nextjs, o_react, o_ts, o_python, o_dsa, o_git, o_c, o_sass, o_adobe_ps, o_adobe_ai]
+const books = [bookCleanCode, bookAssembly, bookJs, bookNext, bookOperating, bookDesign, bookNature]
 
 
 function Diplomas() {
@@ -110,12 +120,13 @@ function Diplomas() {
           <CertDisplay cert={LearnCert} />
 
 
-          <HorizontalCertGallery images={other_certs} title={"Ohh... There's more"} />
+          <HorizontalCertGallery images={other_certs} title={"Smaller Certs, Still Mighty"} h={"h-max"} />
+          <HorizontalCertGallery images={books} title={"Not everything has a certificate - some lessons live in books."} />
 
         </div>
 
 
-        <SectionSummaryText> I know, I know… a wall of certificates. Still rookie numbers. Just waiting to see if AI replaces me before I earn more. </SectionSummaryText>
+        <SectionSummaryText> I know, I know… a pile of certs and books. Still rookie numbers. Just waiting to see if AI replaces me before I finish the next one. </SectionSummaryText>
       </div>
     </LayoutWrapper>
 

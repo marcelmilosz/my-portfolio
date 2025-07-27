@@ -64,8 +64,9 @@ function Navbar() {
           <Button onClick={() => toggleTheme()} shape="circle" rounded="full" variant="glass" p="sm" className="min-h-[40px] min-w-[40px] max-lg:hidden">
             <MyIcon iconName={theme === "dark" ? "moon" : "sun"} iconSize="md" iconStroke="1.5" />
           </Button>
-          <Button rounded="full" variant="glass" p="md" className="max-[350px]:hidden">Contact me</Button>
-
+          <ScrollTo id="contact">
+            <Button rounded="full" variant="glass" p="md" className="max-[350px]:hidden">Contact me</Button>
+          </ScrollTo>
           <NavbarMenuView />
         </div>
       </nav>

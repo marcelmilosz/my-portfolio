@@ -14,6 +14,10 @@ import awardIcon from "../../public/assets/icons/award.svg"
 import arrowLeftIcon from "../../public/assets/icons/arrow-left.svg"
 import briefcaseIcon from "../../public/assets/icons/briefcase.svg"
 import activityIcon from "../../public/assets/icons/activity.svg"
+import emailIcon from "../../public/assets/icons/email.svg"
+import phoneIcon from "../../public/assets/icons/phone.svg"
+import linkedIcon from "../../public/assets/icons/linkedin.svg"
+import githubIcon from "../../public/assets/icons/github.svg"
 
 // Front 
 import pNextjsIcon from "../../public/assets/icons/p_nextjs.svg"
@@ -88,6 +92,10 @@ export type IconNames =
   | "arrow_left"
   | "briefcase"
   | "activity"
+  | "email"
+  | "phone"
+  | "linkedin"
+  | "github"
 
   // Frontend 
   | "p_nextjs"
@@ -196,6 +204,10 @@ const ICONS_MAP: Record<IconNames, React.FC<SVGProps<SVGSVGElement>>> = {
   arrow_left: arrowLeftIcon,
   briefcase: briefcaseIcon,
   activity: activityIcon,
+  phone: phoneIcon,
+  email: emailIcon,
+  linkedin: linkedIcon,
+  github: githubIcon,
 
   // Front 
   p_nextjs: pNextjsIcon,
