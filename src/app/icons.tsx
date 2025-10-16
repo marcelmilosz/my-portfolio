@@ -18,6 +18,7 @@ import emailIcon from "../../public/assets/icons/email.svg"
 import phoneIcon from "../../public/assets/icons/phone.svg"
 import linkedIcon from "../../public/assets/icons/linkedin.svg"
 import githubIcon from "../../public/assets/icons/github.svg"
+import barChartIcon from "../../public/assets/icons/bar-chart.svg"
 
 // Front 
 import pNextjsIcon from "../../public/assets/icons/p_nextjs.svg"
@@ -96,6 +97,7 @@ export type IconNames =
   | "phone"
   | "linkedin"
   | "github"
+  | "bar_chart"
 
   // Frontend 
   | "p_nextjs"
@@ -149,6 +151,7 @@ export type IconNames =
   | "l_asm"
   | "l_c"
   | "l_cpp"
+
 
 
 
@@ -208,6 +211,7 @@ const ICONS_MAP: Record<IconNames, React.FC<SVGProps<SVGSVGElement>>> = {
   email: emailIcon,
   linkedin: linkedIcon,
   github: githubIcon,
+  bar_chart: barChartIcon,
 
   // Front 
   p_nextjs: pNextjsIcon,

@@ -49,6 +49,7 @@ function Navbar() {
           {NAVBAR_ITEMS.map((item) => {
             if (item.key === "landing") return null
             if (item.key === "hobbies") return null
+            if (item.key === "mystats") return null
 
             return (
               <NavbarLink key={item.key} id={item.key}>

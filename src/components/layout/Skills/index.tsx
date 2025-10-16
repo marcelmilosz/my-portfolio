@@ -34,7 +34,7 @@ function Skills() {
             <SkillBox iconName="p_scss" skillName="SASS" />
             <SkillBox iconName="p_bootstrap" skillName="Bootstrap" />
             <SkillBox iconName="p_bulma" skillName="Bulma" />
-            <SkillBox iconName="p_jest" skillName="Jest" />
+            <SkillBox iconName="p_jest" skillName="Jest" tag="Familiar" />
           </div>
         </FramerTopBottomOpacity>
 
@@ -68,7 +68,7 @@ function Skills() {
             <SkillBox iconName="p_postgres" skillName="PostgreSQL" tag="Intermediate" />
             <SkillBox iconName="p_mongo" skillName="Mongo" tag="Intermediate" />
             <SkillBox iconName="p_aws" skillName="AWS" />
-            <SkillBox iconName="p_docker" skillName="Docker" />
+            <SkillBox iconName="p_docker" skillName="Docker" tag="Learning" />
           </div>
         </FramerTopBottomOpacity>
 
@@ -91,7 +91,7 @@ function Skills() {
           <Text size="2xl" weight="semibold" variant="auto"> Bare Metal & Beyond </Text>
 
           <div className="grid grid-cols-[repeat(auto-fit,minmax(120px,1fr))] max-w-full gap-4">
-            <SkillBox iconName="l_cpp" skillName="C++" tag="Intermediate" />
+            <SkillBox iconName="l_cpp" skillName="C++" tag="Familiar" />
             <SkillBox iconName="l_c" skillName="C" tag="Learning" />
             <SkillBox iconName="l_asm" skillName="Assembly Language (Nasm)" tag="Learning" />
             <SkillBox iconName="l_arduino" skillName="Arduino" />

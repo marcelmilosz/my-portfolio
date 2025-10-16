@@ -8,7 +8,7 @@ type TextProps = {
   className?: string;
 };
 
-type TextSize = "xxs" | "xs" | "sm" | "base" | "lg" | "xl" | "2xl" | "3xl" | "hero";
+export type TextSize = "xxs" | "xs" | "sm" | "base" | "lg" | "xl" | "2xl" | "3xl" | "hero";
 type TextWeight = "light" | "normal" | "medium" | "semibold" | "bold";
 type TextVariant = "auto" | "muted" | "primary" | "secondary" | "white";
 

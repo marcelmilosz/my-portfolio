@@ -303,7 +303,7 @@ function ProjectBox({ name, className = "", stickyTop, index }: ProjectBoxProps)
               {app_detail && (
                 <Text variant="muted" size="xs" className="text-right">{app_detail}</Text>
               )}
-              {app_url && <MyLink href={app_url} target="_blank" />}
+              {app_url && <MyLink href={app_url} target="_blank" size="sm" />}
             </div>
           </div>
         </div>

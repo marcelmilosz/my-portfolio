@@ -3,11 +3,11 @@ import { useEffect, useState } from "react";
 import { Text } from "../ui/Text";
 import { FramerTopBottomOpacity } from "./FramerWrappers";
 
-// sectionIds.ts
 export const SECTION_IDS = {
   landing: "landing",
   "about-me": "about-me",
   experience: "experience",
+  mystats: "mystats",
   diplomas: "diplomas",
   projects: "projects",
   skills: "skills",
@@ -18,6 +18,7 @@ export const SECTION_LABELS: Record<keyof typeof SECTION_IDS, string> = {
   landing: "Home",
   "about-me": "About Me",
   experience: "Experience",
+  mystats: "My Stats",
   diplomas: "Certificates",
   projects: "Projects",
   skills: "Skills",
