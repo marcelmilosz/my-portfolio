@@ -11,7 +11,7 @@ import React from "react";
 const HIGHLIGHTS = [
   // { label: "LeetCode problems solved", value: "120+" },
   { label: "Years of Programming", value: "7+" },
-  { label: "Years of Professional Experience", value: "4+" },
+  { label: "Years of Professional Experience", value: "5+" },
   { label: "Shipped Commercial Projects", value: "3+" },
   { label: "Personal Projects", value: "15+" },
   // { label: "GitHub repositories", value: "40+" },
@@ -30,16 +30,15 @@ function AboutMe() {
 
         <FramerTopBottomOpacity className="py-8">
           <Text size="base" className="leading-8">
-            Hey, I&apos;m Marcel — a Full-Stack Developer by day, <BT>Data Science grad by degree</BT>, and code enthusiast since 2016.
-
-            With nearly <BT>five years of commercial experience</BT>, I&apos;ve built everything from sleek web apps to rock-solid backend systems. I handle both frontend and backend — and occasionally question my sanity while debugging both simultaneously. <BT>I aim for software that doesn&apos;t just work; it works beautifully. </BT>
-
-            During my <BT>3-year journey in Data Science</BT>, I built a strong foundation in algorithms, data analysis, and machine learning — and developed a deep appreciation for clean data and even cleaner logic.
+            Hey, I&apos;m Marcel — a <BT>Full-Stack Software Engineer</BT> (Next.js / TypeScript / Django / React) with ~5 years of experience.
             <br /><br />
-            Here&apos;s a secret: when I&apos;m not wrangling APIs or CSS, I&apos;m probably writing x64 Assembly (NASM) or tinkering in C++ — just to remind myself how close to the metal I can get… and how far modern languages have drifted.
+            <BT>Data Science graduate</BT> with hands-on analytics and ML foundations: Python (Pandas/NumPy), SQL, ETL/scrapers, basic modeling (regression/classification), and experiment-driven thinking (metrics, A/B).
             <br /><br />
-            I&apos;m driven by clean code, continuous learning, and crafting applications that are stable, scalable, and just a bit smarter every time.
+            I ship scalable apps end-to-end—from clean DRF APIs and PostgreSQL to fast SSR UIs—focused on performance, reliability, and measurable impact.
+            <br /><br />
+            I also enjoy <BT>learning C++ and low-level internals</BT> (x64 basics) to better understand performance, memory, and how things work under the hood.
           </Text>
+
 
           <div className="flex gap-4 flex-wrap py-8">
             {HIGHLIGHTS.map((item, idx) => (
