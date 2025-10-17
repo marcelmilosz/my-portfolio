@@ -26,8 +26,8 @@ const CurrentExperience: ExperienceData = {
     job_description: [
       <>Automated repetitive graphic design tasks with Python (PyAutoGUI), cutting per-asset time from ~2 hours to less than 5 minutes and significantly boosting team throughput.</>,
       <>Rebuilt billboard asset & campaign management from Google Sheets into a React/Next.js + PostgreSQL app, reducing offer creation from 10+ minutes to a single button action.</>,
-      <>Maintained vixonmedia.pl and coordinated with an external marketing partner to boost visibility across the city and region-achieving +10,000 Facebook visits and ~300 monthly site visits.</>,
-      <>Managed a 15,000+ SKU product database in Subiekt GT; wrote advanced SQL for marketing analytics, logistics coordination, and automated reporting.</>,
+      <>Maintained vixonmedia.pl and coordinated with an external marketing partner to boost visibility across the city and region-achieving +10,000 Facebook visits per month and ~300 monthly site visits.</>,
+      <>Managed a 60,000+ SKU product database in Subiekt GT; wrote advanced SQL for marketing analytics, logistics coordination, and automated reporting.</>,
       <>Built python scrapers (BeautifulSoup + Selenium) to pull supplier data, cutting product add time to our database from ~10 minutes to seconds.</>,
       <>Integrated Subiekt with BaseLinker and automated key sales workflows to reduce errors across order → shipping. Kept ~99.9% positive reviews and “Super Seller+” status on Allegro. Automated messages response time dropped from hours to minutes. Auto-published products from Subiekt → Allegro (no manual steps). Streamlined ops cut sales team size from 10 to 6.</>,
       <>Automated key spreadsheets with Google Apps Script, cutting manual steps in cataloging/finance/logistics and lowering error rates.</>
