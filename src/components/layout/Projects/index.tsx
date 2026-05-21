@@ -12,6 +12,7 @@ import weatherImg from "../../../../public/assets/images/p-weather.png"
 import yahooImg from "../../../../public/assets/images/p-yahoo.png"
 import oscarImg from "../../../../public/assets/images/p-oscar.png"
 import frndImg from "../../../../public/assets/images/p-frnd.png"
+import cloudfideTaskImg from "../../../../public/assets/images/p-filetree-cloudfide.jpg"
 import { SectionSummaryText, Text } from "@/components/ui/Text";
 import MyLink from "@/components/ui/Link";
 import MyIcon from "@/app/icons";
@@ -35,6 +36,19 @@ const ProjectList = {
       commits: "250+",
       type: "Commercial / Personal",
       time_spent: "Built over 6 months of evening sessions",
+    }
+  },
+  CloudfideTask: {
+    img: cloudfideTaskImg,
+    title: "FileTree Explorer",
+    description: "Interactive JSON directory visualizer featuring deep-linking, recursive search, and state persistence.",
+    skills: ["React", "TypeScript", "Tailwind", "Zustand", "Vite"],
+    app_url: "https://marcel-milosz-task-cloudfide.vercel.app/",
+    app_detail: "Built as a recruitment task to demonstrate recursive data handling and clean UI architecture.",
+    nerd_stats: {
+      commits: "10+",
+      type: "Recruitment Task",
+      time_spent: "1 day"
     }
   },
   MyShop: {
@@ -170,8 +184,9 @@ const ProjectList = {
 type ProjectName = keyof typeof ProjectList
 
 const projectNames: ProjectName[] = [
-  "MyShop",
   "Annualty",
+  "MyShop",
+  "CloudfideTask",
   "Messenger",
   "Frnd",
   "Blog",
