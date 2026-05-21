@@ -3,7 +3,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
     images: {
-        domains: [], // jeśli używasz zewnętrznych obrazów
+        domains: [],
     },
     webpack(config: Configuration) {
         config.module?.rules?.push({
